@@ -13,6 +13,8 @@
 https://github.com/liuyongchao/itom-gbt28827-7-skill/tree/main/skills/itom-cost-gbt28827-7
 ```
 
+**已验证**：匿名公开访问、skill-installer远程下载、26文件哈希核对及两个计算器示例均通过，见[发布验证](PUBLICATION.md)。
+
 此链接指向完整技能目录 `skills/itom-cost-gbt28827-7`。应安装整个目录的SKILL.md、references、resources及编译清单。只下载SKILL.md会缺少能力卡和计算器。安装后下一轮对话可使用；如果客户端尚未显示，可重新加载客户端。
 
 也可下载[独立技能ZIP](dist/itom-cost-gbt28827-7-0.1.0.zip)，把其中完整的 `itom-cost-gbt28827-7` 文件夹放到已配置的技能目录。Codex默认位置为 `~/.codex/skills/`，自定义 `CODEX_HOME` 时使用其 `skills/` 子目录。GitHub右上方 Code → Download ZIP 可下载本仓库全部文档和测试材料。

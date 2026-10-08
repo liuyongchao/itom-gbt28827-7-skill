@@ -47,5 +47,6 @@
     "calculator": "85/85",
     "final_triggers": "12/12"
   },
-  "remote_install": "pending"
+  "remote_install": "passed",
+  "remote_verification": "remote-install-verification.json"
 }

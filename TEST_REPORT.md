@@ -53,3 +53,8 @@
 ## 本地复现
 
 从解压包根目录运行 `python tests/calculator/run_regression.py` 可复现85项确定性检查，输出到tests/calculator，不修改生成技能。真实模型回答保留于tests/host/runners；再次模型评测应创建新的独立上下文，不能把保存答案当作重新执行。
+
+
+## GitHub发布后安装验证
+
+已使用上述公开技能目录URL通过skill-installer下载到临时目录。26项运行文件哈希全部相同；匿名抓取使用说明、精华、测试报告和独立ZIP成功。实际运行完整费用和缺项费用两例分别为calculated/12088元、partial/已知11088元且总额留空。详见[远程验证记录](audit/remote-install-verification.json)。此检查验证本次链接和安装内容，不取代前述85项算术回归或来源审查。

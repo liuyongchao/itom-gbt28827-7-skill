@@ -23,5 +23,7 @@
   "source_pdf_included": false,
   "repository_url": "https://github.com/liuyongchao/itom-gbt28827-7-skill",
   "skill_url": "https://github.com/liuyongchao/itom-gbt28827-7-skill/tree/main/skills/itom-cost-gbt28827-7",
-  "publication_status": "prepared_for_publication"
+  "publication_status": "public_and_remote_install_verified",
+  "remote_install_verified": true,
+  "actual_user_skill_directory_modified": false
 }
