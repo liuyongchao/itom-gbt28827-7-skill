@@ -1,0 +1,44 @@
+{
+  "calculator_version": "1.0.0-restricted",
+  "mode": "software_cost",
+  "status": "calculated",
+  "result": {
+    "method": "8.2.1",
+    "classes": [
+      {
+        "id": "A",
+        "rated_workload": "80",
+        "rated_workload_unit": "person_hour",
+        "composite_cost": "12800"
+      },
+      {
+        "id": "B",
+        "rated_workload": "40",
+        "rated_workload_unit": "person_hour",
+        "composite_cost": "8000"
+      }
+    ],
+    "composite_cost": "20800",
+    "direct_nonhuman": "900",
+    "amount": "21700",
+    "known_subtotal": "21700",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O15-software-cost",
+    "scope_id": "O15-software-cost",
+    "domain": "software",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "service_total",
+    "status": "calculated",
+    "amount": "21700",
+    "known_subtotal": "21700",
+    "issues": [],
+    "security_scope_count": "0"
+  }
+}

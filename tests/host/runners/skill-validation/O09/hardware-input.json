@@ -1,0 +1,31 @@
+{
+  "mode": "hardware",
+  "period": "2026年度合同期间",
+  "currency": "CNY",
+  "scope_id": "O09-hardware",
+  "workload_unit": "person_day",
+  "rate_unit": "CNY/person_day",
+  "classes": [
+    {
+      "id": "A",
+      "quantity": "4",
+      "unit_workload": "0.75",
+      "workload_factor": "1.2",
+      "rate": "1000",
+      "price_factor": "0.9"
+    },
+    {
+      "id": "B",
+      "quantity": "2",
+      "unit_workload": "1.5",
+      "workload_factor": "0.8",
+      "rate": "1200",
+      "price_factor": "1.1"
+    }
+  ],
+  "other_costs": {
+    "direct_nonhuman": "800",
+    "indirect_labor": "400",
+    "indirect_nonhuman": "200"
+  }
+}

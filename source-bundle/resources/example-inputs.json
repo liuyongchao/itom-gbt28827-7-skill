@@ -1,0 +1,307 @@
+{
+  "unit_workload": {
+    "mode": "unit_workload",
+    "period": "2027全年（合成演练）",
+    "workload_unit": "person_day",
+    "activities": [
+      {
+        "id": "u1",
+        "category": "routine",
+        "effort": "0.2",
+        "frequency": "12"
+      },
+      {
+        "id": "u2",
+        "category": "response",
+        "effort": "0.4",
+        "frequency": "3"
+      },
+      {
+        "id": "u3",
+        "category": "improvement",
+        "effort": "1.5",
+        "frequency": "2"
+      },
+      {
+        "id": "u4",
+        "category": "assessment",
+        "effort": "0.8",
+        "frequency": "1"
+      }
+    ]
+  },
+  "allocation": {
+    "mode": "allocation",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-allocation",
+    "pool": "24000",
+    "numerator": "45",
+    "denominator": "180",
+    "basis_unit": "person_hour",
+    "basis_source": "合成演练：同月全部项目工作时数"
+  },
+  "environment": {
+    "mode": "environment",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-environment",
+    "workload_unit": "person_day",
+    "rate_unit": "CNY/person_day",
+    "classes": [
+      {
+        "id": "c1",
+        "quantity": "8",
+        "unit_workload": "1.5",
+        "workload_factor": "1.1",
+        "rate": "800",
+        "price_factor": "1.05"
+      }
+    ],
+    "other_costs": {
+      "direct_nonhuman": "600",
+      "indirect_labor": "300",
+      "indirect_nonhuman": "100"
+    }
+  },
+  "hardware": {
+    "mode": "hardware",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-hardware",
+    "workload_unit": "person_day",
+    "rate_unit": "CNY/person_day",
+    "classes": [
+      {
+        "id": "c1",
+        "quantity": "8",
+        "unit_workload": "1.5",
+        "workload_factor": "1.1",
+        "rate": "800",
+        "price_factor": "1.05"
+      }
+    ],
+    "other_costs": {
+      "direct_nonhuman": "600",
+      "indirect_labor": "300",
+      "indirect_nonhuman": "100"
+    }
+  },
+  "security": {
+    "mode": "security",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-security",
+    "workload_unit": "person_day",
+    "rate_unit": "CNY/person_day",
+    "classes": [
+      {
+        "id": "c1",
+        "quantity": "8",
+        "unit_workload": "1.5",
+        "workload_factor": "1.1",
+        "rate": "800",
+        "price_factor": "1.05"
+      }
+    ],
+    "other_costs": {
+      "direct_nonhuman": "600",
+      "indirect_labor": "300",
+      "indirect_nonhuman": "100"
+    },
+    "scope_size": "1"
+  },
+  "management": {
+    "mode": "management",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-management",
+    "workload_unit": "person_day",
+    "rate_unit": "CNY/person_day",
+    "classes": [
+      {
+        "id": "m1",
+        "category": "planning",
+        "occurrences": "2",
+        "unit_workload": "1.5",
+        "rate": "900",
+        "price_factor": "1.1"
+      },
+      {
+        "id": "m2",
+        "category": "delivery",
+        "occurrences": "4",
+        "unit_workload": "0.5",
+        "rate": "800",
+        "price_factor": "1"
+      },
+      {
+        "id": "m3",
+        "category": "quality",
+        "occurrences": "2",
+        "unit_workload": "0.8",
+        "rate": "800",
+        "price_factor": "1"
+      },
+      {
+        "id": "m4",
+        "category": "review",
+        "occurrences": "1",
+        "unit_workload": "1",
+        "rate": "900",
+        "price_factor": "1"
+      }
+    ],
+    "other_costs": {
+      "direct_nonhuman": "0",
+      "indirect_labor": "0",
+      "indirect_nonhuman": "0"
+    }
+  },
+  "software_size": {
+    "mode": "software_size",
+    "period": "2027全年（合成演练）",
+    "size_unit": "FP",
+    "size": "800",
+    "count_source": "合成演练：外部计数报告D1",
+    "count_method": "已声明外部方法和版本",
+    "delivered": false,
+    "special_requirements": true,
+    "creep_factor": "1.1",
+    "factor_source": "合成演练：已定需求蔓延参数"
+  },
+  "software_workload": {
+    "mode": "software_workload",
+    "period": "2027全年（合成演练）",
+    "size": "880",
+    "size_unit": "FP",
+    "productivity": "0.75",
+    "productivity_unit": "person_hour/FP",
+    "mlf": "1.1",
+    "mcf": "0.95",
+    "msf": "1.02",
+    "workload_unit": "person_hour",
+    "parameter_source": "合成演练：三组最终因子及生产率"
+  },
+  "software_cost": {
+    "mode": "software_cost",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-software_cost",
+    "method": "8.2.1",
+    "composite_rate_confirmed": true,
+    "classes": [
+      {
+        "id": "s1",
+        "workload": "703.494",
+        "workload_unit": "person_hour",
+        "rate": "160",
+        "rate_unit": "CNY/person_hour"
+      }
+    ],
+    "direct_nonhuman": "1200"
+  },
+  "migration": {
+    "mode": "migration",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-migration",
+    "workload_unit": "person_day",
+    "rate_unit": "CNY/person_day",
+    "rate": "1100",
+    "rate_source": "合成演练：共同费率",
+    "common_rate_applicable": true,
+    "classes": [
+      {
+        "id": "g1",
+        "quantity": "4",
+        "quantity_unit": "台",
+        "unit_workload": "0.75",
+        "personnel_factor": "1.05",
+        "factors": {
+          "service": {
+            "applicable": true,
+            "value": "1.1",
+            "source": "合成参数"
+          },
+          "location": {
+            "applicable": true,
+            "value": "1.2",
+            "source": "合成参数"
+          },
+          "batch": {
+            "applicable": true,
+            "value": "0.9",
+            "source": "合成参数"
+          }
+        }
+      }
+    ],
+    "other_costs": {
+      "direct_nonhuman": "0",
+      "indirect_labor": "0",
+      "indirect_nonhuman": "0"
+    }
+  },
+  "nonhuman": {
+    "mode": "nonhuman",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-nonhuman",
+    "coverage_complete": true,
+    "non_overlap_confirmed": true,
+    "items": [
+      {
+        "id": "tool-depreciation",
+        "amount": "1300",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "basis": "合成：合同周期软件工具折旧"
+      },
+      {
+        "id": "tool-secondary-dev",
+        "amount": "600",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "basis": "合成：专用工具二次开发"
+      }
+    ]
+  },
+  "total": {
+    "mode": "total",
+    "period": "2027全年（合成演练）",
+    "currency": "CNY",
+    "scope_id": "demo-total",
+    "expected_level": "service_total",
+    "coverage_complete": true,
+    "non_overlap_confirmed": true,
+    "entries": [
+      {
+        "id": "demo-environment",
+        "scope_id": "demo-environment",
+        "domain": "environment",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "calculated",
+        "amount": "12088",
+        "known_subtotal": "12088",
+        "issues": [],
+        "security_scope_count": "0"
+      },
+      {
+        "id": "demo-software_cost",
+        "scope_id": "demo-software_cost",
+        "domain": "software",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "calculated",
+        "amount": "113759.04",
+        "known_subtotal": "113759.04",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    ]
+  }
+}

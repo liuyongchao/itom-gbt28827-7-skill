@@ -1,0 +1,47 @@
+{
+  "calculator_version": "1.0.1-restricted",
+  "mode": "total",
+  "status": "calculated",
+  "result": {
+    "entries": [
+      {
+        "id": "environment",
+        "included_known_subtotal": "7436",
+        "status": "calculated",
+        "excluded_pending_review": false
+      },
+      {
+        "id": "hardware",
+        "included_known_subtotal": "7808",
+        "status": "calculated",
+        "excluded_pending_review": false
+      },
+      {
+        "id": "software",
+        "included_known_subtotal": "21700",
+        "status": "calculated",
+        "excluded_pending_review": false
+      }
+    ],
+    "amount": "36944",
+    "known_subtotal": "36944",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O27-total",
+    "scope_id": "O27-total",
+    "domain": "total",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "service_total",
+    "status": "calculated",
+    "amount": "36944",
+    "known_subtotal": "36944",
+    "issues": [],
+    "security_scope_count": "0"
+  }
+}

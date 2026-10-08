@@ -1,0 +1,48 @@
+{
+  "calculator_version": "1.0.0-restricted",
+  "mode": "management",
+  "status": "calculated",
+  "result": {
+    "classes": [
+      {
+        "id": "规划设计",
+        "workload": "3",
+        "direct_labor": "3630"
+      },
+      {
+        "id": "质量管控",
+        "workload": "1.5",
+        "direct_labor": "1350"
+      }
+    ],
+    "workload": "4.5",
+    "workload_unit": "person_day",
+    "workload_complete": true,
+    "direct_labor": "4980",
+    "other_costs": {
+      "direct_nonhuman": "500",
+      "indirect_labor": "300",
+      "indirect_nonhuman": "200"
+    },
+    "amount": "5980",
+    "known_subtotal": "5980",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O19-management",
+    "scope_id": "O19-management",
+    "domain": "management",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "service_total",
+    "status": "calculated",
+    "amount": "5980",
+    "known_subtotal": "5980",
+    "issues": [],
+    "security_scope_count": "0"
+  }
+}

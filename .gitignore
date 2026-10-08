@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+tests/calculator/generated-examples.json
+tests/calculator/cli-*.json
+tests/calculator/portable/

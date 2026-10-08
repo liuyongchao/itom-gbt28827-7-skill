@@ -1,0 +1,30 @@
+{
+  "calculator_version": "1.0.1-restricted",
+  "mode": "allocation",
+  "status": "calculated",
+  "result": {
+    "basis_unit": "person_hour",
+    "share": "0.15",
+    "allocated_amount": "2400",
+    "amount": "2400",
+    "known_subtotal": "2400",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O03-indirect",
+    "scope_id": "O03-indirect",
+    "domain": "allocation",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "cost_component",
+    "status": "calculated",
+    "amount": "2400",
+    "known_subtotal": "2400",
+    "issues": [],
+    "security_scope_count": "0"
+  }
+}

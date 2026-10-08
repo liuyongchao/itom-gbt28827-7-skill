@@ -1,0 +1,47 @@
+[
+  {
+    "case_id": "O07",
+    "calculation": "environment",
+    "passed": true
+  },
+  {
+    "case_id": "O11",
+    "calculation": "set-size",
+    "passed": true
+  },
+  {
+    "case_id": "O13",
+    "calculation": "software-workload",
+    "passed": true
+  },
+  {
+    "case_id": "O15",
+    "calculation": "software-cost",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "calculation": "security",
+    "passed": true
+  },
+  {
+    "case_id": "O19",
+    "calculation": "management",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "calculation": "software-tools",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "calculation": "hardware-tools",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "calculation": "nonhuman-total",
+    "passed": true
+  }
+]

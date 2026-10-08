@@ -1,0 +1,25 @@
+{
+  "currency": "CNY",
+  "scope_id": "O15-software-cost",
+  "period": "2026年度合同期间",
+  "mode": "software_cost",
+  "method": "8.2.1",
+  "composite_rate_confirmed": true,
+  "classes": [
+    {
+      "id": "A",
+      "workload": "80",
+      "workload_unit": "person_hour",
+      "rate": "160",
+      "rate_unit": "CNY/person_hour"
+    },
+    {
+      "id": "B",
+      "workload": "40",
+      "workload_unit": "person_hour",
+      "rate": "200",
+      "rate_unit": "CNY/person_hour"
+    }
+  ],
+  "direct_nonhuman": "900"
+}

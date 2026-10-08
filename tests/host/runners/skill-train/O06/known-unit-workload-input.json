@@ -1,0 +1,8 @@
+{
+  "inputs": {
+    "effort": "0.2",
+    "frequency": "12"
+  },
+  "reason": "指定计算器unit_workload模式要求完整活动或有依据裁剪；响应次数缺失，不能虚构完整输入。只精确复算已知例行操作部分。",
+  "precision": 80
+}

@@ -1,0 +1,187 @@
+[
+  {
+    "id": "allocation-third",
+    "producer_input": {
+      "mode": "allocation",
+      "period": "2027全年（合成演练）",
+      "currency": "CNY",
+      "scope_id": "demo-allocation",
+      "pool": "100",
+      "numerator": "1",
+      "denominator": "3",
+      "basis_unit": "person_hour",
+      "basis_source": "合成演练：同月全部项目工作时数"
+    },
+    "producer_output": {
+      "calculator_version": "1.0.0-restricted",
+      "mode": "allocation",
+      "status": "calculated",
+      "result": {
+        "basis_unit": "person_hour",
+        "share": "0.33333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "allocated_amount": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "amount": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "known_subtotal": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "demo-allocation",
+        "scope_id": "demo-allocation",
+        "domain": "allocation",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "level": "cost_component",
+        "status": "calculated",
+        "amount": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "known_subtotal": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    },
+    "total_input": {
+      "mode": "total",
+      "period": "2027全年（合成演练）",
+      "currency": "CNY",
+      "scope_id": "demo-total",
+      "expected_level": "cost_component",
+      "coverage_complete": true,
+      "non_overlap_confirmed": true,
+      "entries": [
+        {
+          "id": "demo-allocation",
+          "scope_id": "demo-allocation",
+          "domain": "allocation",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "cost_component",
+          "status": "calculated",
+          "amount": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+          "known_subtotal": "33.333333333333333333333333333333333333333333333333333333333333333333333333333333",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      ]
+    },
+    "total_output": {
+      "calculator_version": "1.0.0-restricted",
+      "mode": "total",
+      "status": "needs_input",
+      "result": {},
+      "issues": [
+        {
+          "code": "INPUT_REQUIRED",
+          "message": "amount 超出实现精度限制（28位输入数字、指数绝对值≤100）"
+        }
+      ],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding"
+    }
+  },
+  {
+    "id": "software-176-conversion",
+    "producer_input": {
+      "mode": "software_cost",
+      "period": "2027全年（合成演练）",
+      "currency": "CNY",
+      "scope_id": "demo-software_cost",
+      "method": "8.2.1",
+      "composite_rate_confirmed": true,
+      "classes": [
+        {
+          "id": "s1",
+          "workload": "1",
+          "workload_unit": "person_hour",
+          "rate": "10000",
+          "rate_unit": "CNY/person_month",
+          "conversion": {
+            "from_unit": "person_hour",
+            "to_unit": "person_month",
+            "divisor": "176",
+            "source": "Explicit synthetic test contract"
+          }
+        }
+      ],
+      "direct_nonhuman": "0"
+    },
+    "producer_output": {
+      "calculator_version": "1.0.0-restricted",
+      "mode": "software_cost",
+      "status": "calculated",
+      "result": {
+        "method": "8.2.1",
+        "classes": [
+          {
+            "id": "s1",
+            "rated_workload": "0.0056818181818181818181818181818181818181818181818181818181818181818181818181818182",
+            "rated_workload_unit": "person_month",
+            "composite_cost": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182"
+          }
+        ],
+        "composite_cost": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+        "direct_nonhuman": "0",
+        "amount": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+        "known_subtotal": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "demo-software_cost",
+        "scope_id": "demo-software_cost",
+        "domain": "software",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "calculated",
+        "amount": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+        "known_subtotal": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    },
+    "total_input": {
+      "mode": "total",
+      "period": "2027全年（合成演练）",
+      "currency": "CNY",
+      "scope_id": "demo-total",
+      "expected_level": "service_total",
+      "coverage_complete": true,
+      "non_overlap_confirmed": true,
+      "entries": [
+        {
+          "id": "demo-software_cost",
+          "scope_id": "demo-software_cost",
+          "domain": "software",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+          "known_subtotal": "56.818181818181818181818181818181818181818181818181818181818181818181818181818182",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      ]
+    },
+    "total_output": {
+      "calculator_version": "1.0.0-restricted",
+      "mode": "total",
+      "status": "needs_input",
+      "result": {},
+      "issues": [
+        {
+          "code": "INPUT_REQUIRED",
+          "message": "amount 超出实现精度限制（28位输入数字、指数绝对值≤100）"
+        }
+      ],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding"
+    }
+  }
+]

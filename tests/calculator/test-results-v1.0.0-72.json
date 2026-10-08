@@ -1,0 +1,4614 @@
+{
+  "suite": "itom-calculator-regression",
+  "scope": "Deterministic implementation tests; not host-model or full-standard certification",
+  "python": "3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)]",
+  "cases": 72,
+  "passed": 72,
+  "failed": 0,
+  "results": [
+    {
+      "id": "unit-four-activities",
+      "passed": true,
+      "input": {
+        "mode": "unit_workload",
+        "period": "2027全年（合成演练）",
+        "workload_unit": "person_day",
+        "activities": [
+          {
+            "id": "u1",
+            "category": "routine",
+            "effort": "0.2",
+            "frequency": "12"
+          },
+          {
+            "id": "u2",
+            "category": "response",
+            "effort": "0.4",
+            "frequency": "3"
+          },
+          {
+            "id": "u3",
+            "category": "improvement",
+            "effort": "1.5",
+            "frequency": "2"
+          },
+          {
+            "id": "u4",
+            "category": "assessment",
+            "effort": "0.8",
+            "frequency": "1"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "unit_workload",
+        "status": "calculated",
+        "result": {
+          "period": "2027全年（合成演练）",
+          "workload_unit": "person_day",
+          "basis": "one_object_per_period",
+          "workload": "7.4",
+          "activities": [
+            {
+              "id": "u1",
+              "category": "routine",
+              "workload": "2.4"
+            },
+            {
+              "id": "u2",
+              "category": "response",
+              "workload": "1.2"
+            },
+            {
+              "id": "u3",
+              "category": "improvement",
+              "workload": "3"
+            },
+            {
+              "id": "u4",
+              "category": "assessment",
+              "workload": "0.8"
+            }
+          ]
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "7.4"
+      },
+      "errors": []
+    },
+    {
+      "id": "unit-frequency-unknown",
+      "passed": true,
+      "input": {
+        "mode": "unit_workload",
+        "period": "2027全年（合成演练）",
+        "workload_unit": "person_day",
+        "activities": [
+          {
+            "id": "u1",
+            "category": "routine",
+            "effort": "0.2"
+          },
+          {
+            "id": "u2",
+            "category": "response",
+            "effort": "0.4",
+            "frequency": "3"
+          },
+          {
+            "id": "u3",
+            "category": "improvement",
+            "effort": "1.5",
+            "frequency": "2"
+          },
+          {
+            "id": "u4",
+            "category": "assessment",
+            "effort": "0.8",
+            "frequency": "1"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "unit_workload",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "缺少 frequency"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "unit-incomplete-coverage",
+      "passed": true,
+      "input": {
+        "mode": "unit_workload",
+        "period": "2027全年（合成演练）",
+        "workload_unit": "person_day",
+        "activities": [
+          {
+            "id": "u1",
+            "category": "routine",
+            "effort": "0.2",
+            "frequency": "12"
+          },
+          {
+            "id": "u2",
+            "category": "response",
+            "effort": "0.4",
+            "frequency": "3"
+          },
+          {
+            "id": "u3",
+            "category": "improvement",
+            "effort": "1.5",
+            "frequency": "2"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "unit_workload",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "四类活动尚未完整盘点（纳入或有依据裁剪）"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "unit-explicit-exclusion",
+      "passed": true,
+      "input": {
+        "mode": "unit_workload",
+        "period": "2027全年（合成演练）",
+        "workload_unit": "person_day",
+        "activities": [
+          {
+            "id": "u1",
+            "category": "routine",
+            "effort": "0.2",
+            "frequency": "12"
+          },
+          {
+            "id": "u2",
+            "category": "response",
+            "effort": "0.4",
+            "frequency": "3"
+          },
+          {
+            "id": "u3",
+            "category": "improvement",
+            "effort": "1.5",
+            "frequency": "2"
+          }
+        ],
+        "excluded_categories": {
+          "assessment": "合成服务目录明确不包含"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "unit_workload",
+        "status": "calculated",
+        "result": {
+          "period": "2027全年（合成演练）",
+          "workload_unit": "person_day",
+          "basis": "one_object_per_period",
+          "workload": "6.6",
+          "activities": [
+            {
+              "id": "u1",
+              "category": "routine",
+              "workload": "2.4"
+            },
+            {
+              "id": "u2",
+              "category": "response",
+              "workload": "1.2"
+            },
+            {
+              "id": "u3",
+              "category": "improvement",
+              "workload": "3"
+            }
+          ]
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "6.6"
+      },
+      "errors": []
+    },
+    {
+      "id": "allocation-quarter",
+      "passed": true,
+      "input": {
+        "mode": "allocation",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-allocation",
+        "pool": "24000",
+        "numerator": "45",
+        "denominator": "180",
+        "basis_unit": "person_hour",
+        "basis_source": "合成演练：同月全部项目工作时数"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "allocation",
+        "status": "calculated",
+        "result": {
+          "basis_unit": "person_hour",
+          "share": "0.25",
+          "allocated_amount": "6000",
+          "amount": "6000",
+          "known_subtotal": "6000",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-allocation",
+          "scope_id": "demo-allocation",
+          "domain": "allocation",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "cost_component",
+          "status": "calculated",
+          "amount": "6000",
+          "known_subtotal": "6000",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "6000",
+        "summary.level": "cost_component"
+      },
+      "errors": []
+    },
+    {
+      "id": "allocation-zero-denominator",
+      "passed": true,
+      "input": {
+        "mode": "allocation",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-allocation",
+        "pool": "24000",
+        "numerator": "45",
+        "denominator": "0",
+        "basis_unit": "person_hour",
+        "basis_source": "合成演练：同月全部项目工作时数"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "allocation",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "denominator 必须大于0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "allocation-share-over-one",
+      "passed": true,
+      "input": {
+        "mode": "allocation",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-allocation",
+        "pool": "24000",
+        "numerator": "181",
+        "denominator": "180",
+        "basis_unit": "person_hour",
+        "basis_source": "合成演练：同月全部项目工作时数"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "allocation",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "分子不能大于分母"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "allocation-missing-basis",
+      "passed": true,
+      "input": {
+        "mode": "allocation",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-allocation",
+        "pool": "24000",
+        "numerator": "45",
+        "denominator": "180",
+        "basis_unit": "person_hour"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "allocation",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "缺少 basis_source"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "environment-cost",
+      "passed": true,
+      "input": {
+        "mode": "environment",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-environment",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "environment",
+        "status": "calculated",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": "11088"
+            }
+          ],
+          "workload": "13.2",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "11088",
+          "other_costs": {
+            "direct_nonhuman": "600",
+            "indirect_labor": "300",
+            "indirect_nonhuman": "100"
+          },
+          "amount": "12088",
+          "known_subtotal": "12088",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-environment",
+          "scope_id": "demo-environment",
+          "domain": "environment",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "12088",
+          "known_subtotal": "12088",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "13.2",
+        "result.direct_labor": "11088",
+        "result.amount": "12088"
+      },
+      "errors": []
+    },
+    {
+      "id": "environment-unknown-cost",
+      "passed": true,
+      "input": {
+        "mode": "environment",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-environment",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "environment",
+        "status": "partial",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": "11088"
+            }
+          ],
+          "workload": "13.2",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "11088",
+          "other_costs": {
+            "direct_nonhuman": "600",
+            "indirect_labor": "300",
+            "indirect_nonhuman": null
+          },
+          "amount": null,
+          "known_subtotal": "11988",
+          "currency": "CNY",
+          "missing_costs": [
+            "indirect_nonhuman"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_nonhuman 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-environment",
+          "scope_id": "demo-environment",
+          "domain": "environment",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "11988",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "indirect_nonhuman 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null,
+        "result.known_subtotal": "11988"
+      },
+      "errors": []
+    },
+    {
+      "id": "environment-missing-factor",
+      "passed": true,
+      "input": {
+        "mode": "environment",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-environment",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "environment",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "缺少 workload_factor"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "environment-unit-conflict",
+      "passed": true,
+      "input": {
+        "mode": "environment",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-environment",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_month",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "environment",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "rate_unit 不支持: CNY/person_month"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-multiple-rates",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          },
+          {
+            "id": "c2",
+            "quantity": "2",
+            "unit_workload": "1",
+            "workload_factor": "1",
+            "rate": "900",
+            "price_factor": "1"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "calculated",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": "11088"
+            },
+            {
+              "id": "c2",
+              "workload": "2",
+              "direct_labor": "1800"
+            }
+          ],
+          "workload": "15.2",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "12888",
+          "other_costs": {
+            "direct_nonhuman": "600",
+            "indirect_labor": "300",
+            "indirect_nonhuman": "100"
+          },
+          "amount": "13888",
+          "known_subtotal": "13888",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-hardware",
+          "scope_id": "demo-hardware",
+          "domain": "hardware",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "13888",
+          "known_subtotal": "13888",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "13888"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-negative",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "-1",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "quantity 必须非负"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-nan",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "NaN",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "rate 必须是有限十进制字符串"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-number-not-string",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": 800,
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "rate 必须是有限十进制字符串"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-decimal-count",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "1.5",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "quantity 必须为整数"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-factor-not-one-default",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": null
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "缺少 price_factor"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "security-single",
+      "passed": true,
+      "input": {
+        "mode": "security",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-security",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        },
+        "scope_size": "1"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "security",
+        "status": "calculated",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": "11088"
+            }
+          ],
+          "workload": "13.2",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "11088",
+          "other_costs": {
+            "direct_nonhuman": "600",
+            "indirect_labor": "300",
+            "indirect_nonhuman": "100"
+          },
+          "amount": "12088",
+          "known_subtotal": "12088",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-security",
+          "scope_id": "demo-security",
+          "domain": "security",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "12088",
+          "known_subtotal": "12088",
+          "issues": [],
+          "security_scope_count": "1",
+          "security_scope_size": "1"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "12088",
+        "summary.security_scope_size": "1"
+      },
+      "errors": []
+    },
+    {
+      "id": "security-two-classes",
+      "passed": true,
+      "input": {
+        "mode": "security",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-security",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          },
+          {
+            "id": "c2",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        },
+        "scope_size": "2"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "security",
+        "status": "needs_review",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": null
+            },
+            {
+              "id": "c2",
+              "workload": "13.2",
+              "direct_labor": null
+            }
+          ],
+          "workload": "26.4",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": null,
+          "other_costs": {
+            "direct_nonhuman": "600",
+            "indirect_labor": "300",
+            "indirect_nonhuman": "100"
+          },
+          "amount": null,
+          "known_subtotal": "1000",
+          "currency": "CNY",
+          "missing_costs": [
+            "direct_labor"
+          ]
+        },
+        "issues": [
+          {
+            "code": "S01/N01",
+            "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_labor 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-security",
+          "scope_id": "demo-security",
+          "domain": "security",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "1000",
+          "issues": [
+            {
+              "code": "S01/N01",
+              "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "direct_labor 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "1",
+          "security_scope_size": "2"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null,
+        "result.workload": "26.4",
+        "result.direct_labor": null
+      },
+      "errors": []
+    },
+    {
+      "id": "security-one-row-of-two",
+      "passed": true,
+      "input": {
+        "mode": "security",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-security",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        },
+        "scope_size": "2"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "security",
+        "status": "needs_review",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": null
+            }
+          ],
+          "workload": "13.2",
+          "workload_unit": "person_day",
+          "workload_complete": false,
+          "direct_labor": null,
+          "other_costs": {
+            "direct_nonhuman": "600",
+            "indirect_labor": "300",
+            "indirect_nonhuman": "100"
+          },
+          "amount": null,
+          "known_subtotal": "1000",
+          "currency": "CNY",
+          "missing_costs": [
+            "direct_labor"
+          ]
+        },
+        "issues": [
+          {
+            "code": "S01/N01",
+            "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_labor 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-security",
+          "scope_id": "demo-security",
+          "domain": "security",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "1000",
+          "issues": [
+            {
+              "code": "S01/N01",
+              "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "direct_labor 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "1",
+          "security_scope_size": "2"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.workload_complete": false,
+        "result.amount": null
+      },
+      "errors": []
+    },
+    {
+      "id": "security-lied-scope-size",
+      "passed": true,
+      "input": {
+        "mode": "security",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-security",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          },
+          {
+            "id": "c2",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        },
+        "scope_size": "1"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "security",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "scope_size 不得小于已提供安全类别数"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "management-four-activities",
+      "passed": true,
+      "input": {
+        "mode": "management",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-management",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "m1",
+            "category": "planning",
+            "occurrences": "2",
+            "unit_workload": "1.5",
+            "rate": "900",
+            "price_factor": "1.1"
+          },
+          {
+            "id": "m2",
+            "category": "delivery",
+            "occurrences": "4",
+            "unit_workload": "0.5",
+            "rate": "800",
+            "price_factor": "1"
+          },
+          {
+            "id": "m3",
+            "category": "quality",
+            "occurrences": "2",
+            "unit_workload": "0.8",
+            "rate": "800",
+            "price_factor": "1"
+          },
+          {
+            "id": "m4",
+            "category": "review",
+            "occurrences": "1",
+            "unit_workload": "1",
+            "rate": "900",
+            "price_factor": "1"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "management",
+        "status": "calculated",
+        "result": {
+          "classes": [
+            {
+              "id": "m1",
+              "workload": "3",
+              "direct_labor": "2970"
+            },
+            {
+              "id": "m2",
+              "workload": "2",
+              "direct_labor": "1600"
+            },
+            {
+              "id": "m3",
+              "workload": "1.6",
+              "direct_labor": "1280"
+            },
+            {
+              "id": "m4",
+              "workload": "1",
+              "direct_labor": "900"
+            }
+          ],
+          "workload": "7.6",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "6750",
+          "other_costs": {
+            "direct_nonhuman": "0",
+            "indirect_labor": "0",
+            "indirect_nonhuman": "0"
+          },
+          "amount": "6750",
+          "known_subtotal": "6750",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-management",
+          "scope_id": "demo-management",
+          "domain": "management",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "6750",
+          "known_subtotal": "6750",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "7.6",
+        "result.amount": "6750"
+      },
+      "errors": []
+    },
+    {
+      "id": "management-unknown-extra",
+      "passed": true,
+      "input": {
+        "mode": "management",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-management",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "m1",
+            "category": "planning",
+            "occurrences": "2",
+            "unit_workload": "1.5",
+            "rate": "900",
+            "price_factor": "1.1"
+          },
+          {
+            "id": "m2",
+            "category": "delivery",
+            "occurrences": "4",
+            "unit_workload": "0.5",
+            "rate": "800",
+            "price_factor": "1"
+          },
+          {
+            "id": "m3",
+            "category": "quality",
+            "occurrences": "2",
+            "unit_workload": "0.8",
+            "rate": "800",
+            "price_factor": "1"
+          },
+          {
+            "id": "m4",
+            "category": "review",
+            "occurrences": "1",
+            "unit_workload": "1",
+            "rate": "900",
+            "price_factor": "1"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "management",
+        "status": "partial",
+        "result": {
+          "classes": [
+            {
+              "id": "m1",
+              "workload": "3",
+              "direct_labor": "2970"
+            },
+            {
+              "id": "m2",
+              "workload": "2",
+              "direct_labor": "1600"
+            },
+            {
+              "id": "m3",
+              "workload": "1.6",
+              "direct_labor": "1280"
+            },
+            {
+              "id": "m4",
+              "workload": "1",
+              "direct_labor": "900"
+            }
+          ],
+          "workload": "7.6",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "6750",
+          "other_costs": {
+            "direct_nonhuman": null,
+            "indirect_labor": null,
+            "indirect_nonhuman": null
+          },
+          "amount": null,
+          "known_subtotal": "6750",
+          "currency": "CNY",
+          "missing_costs": [
+            "direct_nonhuman",
+            "indirect_labor",
+            "indirect_nonhuman"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_nonhuman 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_labor 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_nonhuman 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-management",
+          "scope_id": "demo-management",
+          "domain": "management",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "6750",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "direct_nonhuman 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "indirect_labor 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "indirect_nonhuman 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null
+      },
+      "errors": []
+    },
+    {
+      "id": "management-incomplete-coverage",
+      "passed": true,
+      "input": {
+        "mode": "management",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-management",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "m1",
+            "category": "planning",
+            "occurrences": "2",
+            "unit_workload": "1.5",
+            "rate": "900",
+            "price_factor": "1.1"
+          },
+          {
+            "id": "m2",
+            "category": "delivery",
+            "occurrences": "4",
+            "unit_workload": "0.5",
+            "rate": "800",
+            "price_factor": "1"
+          },
+          {
+            "id": "m3",
+            "category": "quality",
+            "occurrences": "2",
+            "unit_workload": "0.8",
+            "rate": "800",
+            "price_factor": "1"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "management",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "四类活动尚未完整盘点（纳入或有依据裁剪）"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-fp-adjustment",
+      "passed": true,
+      "input": {
+        "mode": "software_size",
+        "period": "2027全年（合成演练）",
+        "size_unit": "FP",
+        "size": "800",
+        "count_source": "合成演练：外部计数报告D1",
+        "count_method": "已声明外部方法和版本",
+        "delivered": false,
+        "special_requirements": true,
+        "creep_factor": "1.1",
+        "factor_source": "合成演练：已定需求蔓延参数"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_size",
+        "status": "calculated",
+        "result": {
+          "original_size": "800",
+          "adjusted_size": "880",
+          "size_unit": "FP",
+          "creep_factor": "1.1",
+          "factor_source": "合成演练：已定需求蔓延参数"
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "calculated",
+        "result.adjusted_size": "880",
+        "result.size_unit": "FP"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-fp-no-creep-default",
+      "passed": true,
+      "input": {
+        "mode": "software_size",
+        "period": "2027全年（合成演练）",
+        "size_unit": "FP",
+        "size": "800",
+        "count_source": "合成演练：外部计数报告D1",
+        "count_method": "已声明外部方法和版本",
+        "delivered": false,
+        "special_requirements": true,
+        "factor_source": "合成演练：已定需求蔓延参数"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_size",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "需求蔓延因子未知，不能默认1"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-fp-local-one",
+      "passed": true,
+      "input": {
+        "mode": "software_size",
+        "period": "2027全年（合成演练）",
+        "size_unit": "FP",
+        "size": "800",
+        "count_source": "合成演练：外部计数报告D1",
+        "count_method": "已声明外部方法和版本",
+        "delivered": true,
+        "special_requirements": false,
+        "factor_source": "合成演练：已定需求蔓延参数"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_size",
+        "status": "calculated",
+        "result": {
+          "original_size": "800",
+          "adjusted_size": "800",
+          "size_unit": "FP",
+          "creep_factor": "1",
+          "factor_source": "8.3.1已交付且无特殊要求之注"
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "calculated",
+        "result.adjusted_size": "800",
+        "result.creep_factor": "1"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-sets-separate",
+      "passed": true,
+      "input": {
+        "mode": "software_size",
+        "period": "2027全年（合成演练）",
+        "size_unit": "set",
+        "size": "6",
+        "count_source": "合成演练：外部计数报告D1",
+        "count_method": "已声明外部方法和版本",
+        "delivered": false,
+        "special_requirements": true,
+        "creep_factor": "1.1",
+        "factor_source": "合成演练：已定需求蔓延参数",
+        "level_factor": "1.1",
+        "type_factor": "0.9"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_size",
+        "status": "calculated",
+        "result": {
+          "original_size": "6",
+          "adjusted_size": "5.94",
+          "size_unit": "adjusted_set"
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "calculated",
+        "result.adjusted_size": "5.94",
+        "result.size_unit": "adjusted_set"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-workload-product",
+      "passed": true,
+      "input": {
+        "mode": "software_workload",
+        "period": "2027全年（合成演练）",
+        "size": "880",
+        "size_unit": "FP",
+        "productivity": "0.75",
+        "productivity_unit": "person_hour/FP",
+        "mlf": "1.1",
+        "mcf": "0.95",
+        "msf": "1.02",
+        "workload_unit": "person_hour",
+        "parameter_source": "合成演练：三组最终因子及生产率"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_workload",
+        "status": "calculated",
+        "result": {
+          "workload": "703.494",
+          "workload_unit": "person_hour",
+          "size_unit": "FP"
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "703.494"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-unit-mismatch",
+      "passed": true,
+      "input": {
+        "mode": "software_workload",
+        "period": "2027全年（合成演练）",
+        "size": "880",
+        "size_unit": "FP",
+        "productivity": "0.75",
+        "productivity_unit": "FP/person_hour",
+        "mlf": "1.1",
+        "mcf": "0.95",
+        "msf": "1.02",
+        "workload_unit": "person_hour",
+        "parameter_source": "合成演练：三组最终因子及生产率"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_workload",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "productivity_unit 不支持: FP/person_hour"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-missing-group-factor",
+      "passed": true,
+      "input": {
+        "mode": "software_workload",
+        "period": "2027全年（合成演练）",
+        "size": "880",
+        "size_unit": "FP",
+        "productivity": "0.75",
+        "productivity_unit": "person_hour/FP",
+        "mlf": "1.1",
+        "mcf": "0.95",
+        "workload_unit": "person_hour",
+        "parameter_source": "合成演练：三组最终因子及生产率"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_workload",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "缺少 msf"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-composite-cost",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_hour"
+          }
+        ],
+        "direct_nonhuman": "1200"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "calculated",
+        "result": {
+          "method": "8.2.1",
+          "classes": [
+            {
+              "id": "s1",
+              "rated_workload": "703.494",
+              "rated_workload_unit": "person_hour",
+              "composite_cost": "112559.04"
+            }
+          ],
+          "composite_cost": "112559.04",
+          "direct_nonhuman": "1200",
+          "amount": "113759.04",
+          "known_subtotal": "113759.04",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-software_cost",
+          "scope_id": "demo-software_cost",
+          "domain": "software",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "113759.04",
+          "known_subtotal": "113759.04",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "113759.04"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-double-indirect",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_hour"
+          }
+        ],
+        "direct_nonhuman": "1200",
+        "indirect_labor": "1000"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "DOUBLE_COUNT",
+            "message": "综合费率已含间接成本和毛利润；本模式只额外归集direct_nonhuman"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input",
+        "issues.0.code": "DOUBLE_COUNT"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-blocked-fp-method",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.2",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_hour"
+          }
+        ],
+        "direct_nonhuman": "1200"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "needs_review",
+        "result": {
+          "amount": null,
+          "known_subtotal": "0",
+          "currency": "CNY",
+          "missing_costs": [
+            "software_cost"
+          ]
+        },
+        "issues": [
+          {
+            "code": "S02/N02",
+            "message": "本版不执行8.2.2功能点单价成本路径"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "software_cost 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-software_cost",
+          "scope_id": "demo-software_cost",
+          "domain": "software",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "0",
+          "issues": [
+            {
+              "code": "S02/N02",
+              "message": "本版不执行8.2.2功能点单价成本路径"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "software_cost 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null,
+        "issues.0.code": "S02/N02"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-missing-conversion",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_month"
+          }
+        ],
+        "direct_nonhuman": "1200"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "缺少 conversion"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-explicit-conversion",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "40",
+            "workload_unit": "person_hour",
+            "rate": "20000",
+            "rate_unit": "CNY/person_month",
+            "conversion": {
+              "from_unit": "person_hour",
+              "to_unit": "person_month",
+              "divisor": "160",
+              "source": "合成合同明确160小时/人月"
+            }
+          }
+        ],
+        "direct_nonhuman": "1200"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "calculated",
+        "result": {
+          "method": "8.2.1",
+          "classes": [
+            {
+              "id": "s1",
+              "rated_workload": "0.25",
+              "rated_workload_unit": "person_month",
+              "composite_cost": "5000"
+            }
+          ],
+          "composite_cost": "5000",
+          "direct_nonhuman": "1200",
+          "amount": "6200",
+          "known_subtotal": "6200",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-software_cost",
+          "scope_id": "demo-software_cost",
+          "domain": "software",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "6200",
+          "known_subtotal": "6200",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "6200"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-unknown-direct-nonhuman",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_hour"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "partial",
+        "result": {
+          "method": "8.2.1",
+          "classes": [
+            {
+              "id": "s1",
+              "rated_workload": "703.494",
+              "rated_workload_unit": "person_hour",
+              "composite_cost": "112559.04"
+            }
+          ],
+          "composite_cost": "112559.04",
+          "direct_nonhuman": null,
+          "amount": null,
+          "known_subtotal": "112559.04",
+          "currency": "CNY",
+          "missing_costs": [
+            "direct_nonhuman"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_nonhuman 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-software_cost",
+          "scope_id": "demo-software_cost",
+          "domain": "software",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "112559.04",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "direct_nonhuman 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null,
+        "result.known_subtotal": "112559.04"
+      },
+      "errors": []
+    },
+    {
+      "id": "migration-workload-and-cost",
+      "passed": true,
+      "input": {
+        "mode": "migration",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-migration",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "rate": "1100",
+        "rate_source": "合成演练：共同费率",
+        "common_rate_applicable": true,
+        "classes": [
+          {
+            "id": "g1",
+            "quantity": "4",
+            "quantity_unit": "台",
+            "unit_workload": "0.75",
+            "personnel_factor": "1.05",
+            "factors": {
+              "service": {
+                "applicable": true,
+                "value": "1.1",
+                "source": "合成参数"
+              },
+              "location": {
+                "applicable": true,
+                "value": "1.2",
+                "source": "合成参数"
+              },
+              "batch": {
+                "applicable": true,
+                "value": "0.9",
+                "source": "合成参数"
+              }
+            }
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "migration",
+        "status": "calculated",
+        "result": {
+          "classes": [
+            {
+              "id": "g1",
+              "workload": "3.7422",
+              "direct_labor": "4116.42"
+            }
+          ],
+          "workload": "3.7422",
+          "workload_unit": "person_day",
+          "direct_labor": "4116.42",
+          "other_costs": {
+            "direct_nonhuman": "0",
+            "indirect_labor": "0",
+            "indirect_nonhuman": "0"
+          },
+          "amount": "4116.42",
+          "known_subtotal": "4116.42",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-migration",
+          "scope_id": "demo-migration",
+          "domain": "migration",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "4116.42",
+          "known_subtotal": "4116.42",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "3.7422",
+        "result.amount": "4116.42"
+      },
+      "errors": []
+    },
+    {
+      "id": "migration-missing-factor",
+      "passed": true,
+      "input": {
+        "mode": "migration",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-migration",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "rate": "1100",
+        "rate_source": "合成演练：共同费率",
+        "common_rate_applicable": true,
+        "classes": [
+          {
+            "id": "g1",
+            "quantity": "4",
+            "quantity_unit": "台",
+            "unit_workload": "0.75",
+            "personnel_factor": "1.05",
+            "factors": {
+              "service": {
+                "applicable": true,
+                "value": "1.1",
+                "source": "合成参数"
+              },
+              "location": {
+                "applicable": true,
+                "value": "1.2",
+                "source": "合成参数"
+              }
+            }
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "migration",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "factors须明确service/location/batch三因子"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "migration-one-factor-local-rule",
+      "passed": true,
+      "input": {
+        "mode": "migration",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-migration",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "rate": "1100",
+        "rate_source": "合成演练：共同费率",
+        "common_rate_applicable": true,
+        "classes": [
+          {
+            "id": "g1",
+            "quantity": "4",
+            "quantity_unit": "台",
+            "unit_workload": "0.75",
+            "personnel_factor": "1.05",
+            "factors": {
+              "service": {
+                "applicable": true,
+                "value": "1.1",
+                "source": "合成参数"
+              },
+              "location": {
+                "applicable": false,
+                "value": "1",
+                "source": "已确认本项目仅服务级别因子适用"
+              },
+              "batch": {
+                "applicable": false,
+                "value": "1",
+                "source": "已确认本项目仅服务级别因子适用"
+              }
+            }
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "migration",
+        "status": "calculated",
+        "result": {
+          "classes": [
+            {
+              "id": "g1",
+              "workload": "3.465",
+              "direct_labor": "3811.5"
+            }
+          ],
+          "workload": "3.465",
+          "workload_unit": "person_day",
+          "direct_labor": "3811.5",
+          "other_costs": {
+            "direct_nonhuman": "0",
+            "indirect_labor": "0",
+            "indirect_nonhuman": "0"
+          },
+          "amount": "3811.5",
+          "known_subtotal": "3811.5",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-migration",
+          "scope_id": "demo-migration",
+          "domain": "migration",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "3811.5",
+          "known_subtotal": "3811.5",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.workload": "3.465",
+        "result.amount": "3811.5"
+      },
+      "errors": []
+    },
+    {
+      "id": "migration-nonapplicable-not-one",
+      "passed": true,
+      "input": {
+        "mode": "migration",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-migration",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "rate": "1100",
+        "rate_source": "合成演练：共同费率",
+        "common_rate_applicable": true,
+        "classes": [
+          {
+            "id": "g1",
+            "quantity": "4",
+            "quantity_unit": "台",
+            "unit_workload": "0.75",
+            "personnel_factor": "1.05",
+            "factors": {
+              "service": {
+                "applicable": true,
+                "value": "1.1",
+                "source": "合成参数"
+              },
+              "location": {
+                "applicable": false,
+                "value": "1.2",
+                "source": "合成参数"
+              },
+              "batch": {
+                "applicable": true,
+                "value": "0.9",
+                "source": "合成参数"
+              }
+            }
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "migration",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "不适用因子只有明确依据取1，不能填其他值"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "migration-common-rate-not-confirmed",
+      "passed": true,
+      "input": {
+        "mode": "migration",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-migration",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "rate": "1100",
+        "rate_source": "合成演练：共同费率",
+        "common_rate_applicable": false,
+        "classes": [
+          {
+            "id": "g1",
+            "quantity": "4",
+            "quantity_unit": "台",
+            "unit_workload": "0.75",
+            "personnel_factor": "1.05",
+            "factors": {
+              "service": {
+                "applicable": true,
+                "value": "1.1",
+                "source": "合成参数"
+              },
+              "location": {
+                "applicable": true,
+                "value": "1.2",
+                "source": "合成参数"
+              },
+              "batch": {
+                "applicable": true,
+                "value": "0.9",
+                "source": "合成参数"
+              }
+            }
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "0",
+          "indirect_labor": "0",
+          "indirect_nonhuman": "0"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "migration",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "common_rate_applicable 尚未确认"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "nonhuman-tool-sum",
+      "passed": true,
+      "input": {
+        "mode": "nonhuman",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-nonhuman",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "items": [
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          },
+          {
+            "id": "tool-secondary-dev",
+            "amount": "600",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：专用工具二次开发"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "nonhuman",
+        "status": "calculated",
+        "result": {
+          "items": [
+            {
+              "id": "tool-depreciation",
+              "amount": "1300"
+            },
+            {
+              "id": "tool-secondary-dev",
+              "amount": "600"
+            }
+          ],
+          "amount": "1900",
+          "known_subtotal": "1900",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-nonhuman",
+          "scope_id": "demo-nonhuman",
+          "domain": "nonhuman",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "cost_component",
+          "status": "calculated",
+          "amount": "1900",
+          "known_subtotal": "1900",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "1900",
+        "summary.level": "cost_component"
+      },
+      "errors": []
+    },
+    {
+      "id": "nonhuman-unknown-item",
+      "passed": true,
+      "input": {
+        "mode": "nonhuman",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-nonhuman",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "items": [
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          },
+          {
+            "id": "tool-secondary-dev",
+            "amount": null,
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：专用工具二次开发"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "nonhuman",
+        "status": "partial",
+        "result": {
+          "items": [
+            {
+              "id": "tool-depreciation",
+              "amount": "1300"
+            },
+            {
+              "id": "tool-secondary-dev",
+              "amount": null
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "1300",
+          "currency": "CNY",
+          "missing_costs": [
+            "tool-secondary-dev"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "tool-secondary-dev 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-nonhuman",
+          "scope_id": "demo-nonhuman",
+          "domain": "nonhuman",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "cost_component",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "1300",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "tool-secondary-dev 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null,
+        "result.known_subtotal": "1300"
+      },
+      "errors": []
+    },
+    {
+      "id": "nonhuman-unpriced-quantity",
+      "passed": true,
+      "input": {
+        "mode": "nonhuman",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-nonhuman",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "items": [
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          },
+          {
+            "id": "tool-secondary-dev",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：专用工具二次开发",
+            "tool_days": "2"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "nonhuman",
+        "status": "partial",
+        "result": {
+          "items": [
+            {
+              "id": "tool-depreciation",
+              "amount": "1300"
+            },
+            {
+              "id": "tool-secondary-dev",
+              "amount": null
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "1300",
+          "currency": "CNY",
+          "missing_costs": [
+            "tool-secondary-dev"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "tool-secondary-dev 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-nonhuman",
+          "scope_id": "demo-nonhuman",
+          "domain": "nonhuman",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "cost_component",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "1300",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "tool-secondary-dev 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null
+      },
+      "errors": []
+    },
+    {
+      "id": "nonhuman-period-conflict",
+      "passed": true,
+      "input": {
+        "mode": "nonhuman",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-nonhuman",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "items": [
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2026全年",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          },
+          {
+            "id": "tool-secondary-dev",
+            "amount": "600",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：专用工具二次开发"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "nonhuman",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "费用期间不一致"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "nonhuman-coverage-incomplete",
+      "passed": true,
+      "input": {
+        "mode": "nonhuman",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-nonhuman",
+        "coverage_complete": false,
+        "non_overlap_confirmed": true,
+        "items": [
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          },
+          {
+            "id": "tool-secondary-dev",
+            "amount": "600",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：专用工具二次开发"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "nonhuman",
+        "status": "partial",
+        "result": {
+          "items": [
+            {
+              "id": "tool-depreciation",
+              "amount": "1300"
+            },
+            {
+              "id": "tool-secondary-dev",
+              "amount": "600"
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "1900",
+          "currency": "CNY",
+          "missing_costs": [
+            "coverage_incomplete"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "coverage_incomplete 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-nonhuman",
+          "scope_id": "demo-nonhuman",
+          "domain": "nonhuman",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "cost_component",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "1900",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "coverage_incomplete 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null
+      },
+      "errors": []
+    },
+    {
+      "id": "total-disjoint-complete",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "calculated",
+        "result": {
+          "entries": [
+            {
+              "id": "demo-environment",
+              "included_known_subtotal": "12088",
+              "status": "calculated",
+              "excluded_pending_review": false
+            },
+            {
+              "id": "demo-software_cost",
+              "included_known_subtotal": "113759.04",
+              "status": "calculated",
+              "excluded_pending_review": false
+            }
+          ],
+          "amount": "125847.04",
+          "known_subtotal": "125847.04",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "calculated",
+          "amount": "125847.04",
+          "known_subtotal": "125847.04",
+          "issues": [],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "calculated",
+        "result.amount": "125847.04"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-period-conflict",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2026全年",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "分项期间或币种不一致"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-currency-conflict",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "USD",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "分项期间或币种不一致"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-level-conflict",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-nonhuman",
+            "scope_id": "demo-nonhuman",
+            "domain": "nonhuman",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "cost_component",
+            "status": "calculated",
+            "amount": "1900",
+            "known_subtotal": "1900",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "直接人力/构成金额与服务总额层级不能混合"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-duplicate-scope",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-environment",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "DUPLICATE",
+            "message": "scope_id 重复；请核对已含费用或重叠范围"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-coverage-incomplete",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": false,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "partial",
+        "result": {
+          "entries": [
+            {
+              "id": "demo-environment",
+              "included_known_subtotal": "12088",
+              "status": "calculated",
+              "excluded_pending_review": false
+            },
+            {
+              "id": "demo-software_cost",
+              "included_known_subtotal": "113759.04",
+              "status": "calculated",
+              "excluded_pending_review": false
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "125847.04",
+          "currency": "CNY",
+          "missing_costs": [
+            "coverage_incomplete"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "coverage_incomplete 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "125847.04",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "coverage_incomplete 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null,
+        "result.known_subtotal": "125847.04"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-unknown-upstream",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "partial",
+            "amount": null,
+            "known_subtotal": "11988",
+            "issues": [
+              {
+                "code": "UNKNOWN_COST",
+                "message": "indirect_nonhuman 未确定；不得视为0"
+              }
+            ],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "partial",
+        "result": {
+          "entries": [
+            {
+              "id": "demo-environment",
+              "included_known_subtotal": "11988",
+              "status": "partial",
+              "excluded_pending_review": false
+            },
+            {
+              "id": "demo-software_cost",
+              "included_known_subtotal": "113759.04",
+              "status": "calculated",
+              "excluded_pending_review": false
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "125747.04",
+          "currency": "CNY",
+          "missing_costs": [
+            "demo-environment"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_nonhuman 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "demo-environment 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "125747.04",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "indirect_nonhuman 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "demo-environment 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null,
+        "result.known_subtotal": "125747.04"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-propagate-n02",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "needs_review",
+            "amount": null,
+            "known_subtotal": "0",
+            "issues": [
+              {
+                "code": "S02/N02",
+                "message": "本版不执行8.2.2功能点单价成本路径"
+              },
+              {
+                "code": "UNKNOWN_COST",
+                "message": "software_cost 未确定；不得视为0"
+              }
+            ],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_review",
+        "result": {
+          "entries": [
+            {
+              "id": "demo-environment",
+              "included_known_subtotal": "12088",
+              "status": "calculated",
+              "excluded_pending_review": false
+            },
+            {
+              "id": "demo-software_cost",
+              "included_known_subtotal": "0",
+              "status": "needs_review",
+              "excluded_pending_review": false
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "12088",
+          "currency": "CNY",
+          "missing_costs": [
+            "demo-software_cost"
+          ]
+        },
+        "issues": [
+          {
+            "code": "S02/N02",
+            "message": "本版不执行8.2.2功能点单价成本路径"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "software_cost 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "demo-software_cost 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "12088",
+          "issues": [
+            {
+              "code": "S02/N02",
+              "message": "本版不执行8.2.2功能点单价成本路径"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "software_cost 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "demo-software_cost 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null,
+        "result.known_subtotal": "12088"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-preserve-n04",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ],
+        "unresolved_issues": [
+          {
+            "code": "N04",
+            "message": "参数适用性待核查"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_review",
+        "result": {
+          "entries": [
+            {
+              "id": "demo-environment",
+              "included_known_subtotal": "12088",
+              "status": "calculated",
+              "excluded_pending_review": false
+            },
+            {
+              "id": "demo-software_cost",
+              "included_known_subtotal": "113759.04",
+              "status": "calculated",
+              "excluded_pending_review": false
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "125847.04",
+          "currency": "CNY",
+          "missing_costs": []
+        },
+        "issues": [
+          {
+            "code": "N04",
+            "message": "参数适用性待核查"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "125847.04",
+          "issues": [
+            {
+              "code": "N04",
+              "message": "参数适用性待核查"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null
+      },
+      "errors": []
+    },
+    {
+      "id": "total-block-security-split",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "sec-a",
+            "scope_id": "sec-a",
+            "domain": "security",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "1",
+            "security_scope_size": "1"
+          },
+          {
+            "id": "sec-b",
+            "scope_id": "sec-b",
+            "domain": "security",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "1",
+            "security_scope_size": "1"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_review",
+        "result": {
+          "entries": [
+            {
+              "id": "sec-a",
+              "included_known_subtotal": "0",
+              "status": "calculated",
+              "excluded_pending_review": true
+            },
+            {
+              "id": "sec-b",
+              "included_known_subtotal": "0",
+              "status": "calculated",
+              "excluded_pending_review": true
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "0",
+          "currency": "CNY",
+          "missing_costs": [
+            "sec-a",
+            "sec-b"
+          ]
+        },
+        "issues": [
+          {
+            "code": "S01/N01",
+            "message": "多安全分类/多单类分项不能合并成本；该项未计入已知小计"
+          },
+          {
+            "code": "S01/N01",
+            "message": "多安全分类/多单类分项不能合并成本；该项未计入已知小计"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "sec-a 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "sec-b 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "0",
+          "issues": [
+            {
+              "code": "S01/N01",
+              "message": "多安全分类/多单类分项不能合并成本；该项未计入已知小计"
+            },
+            {
+              "code": "S01/N01",
+              "message": "多安全分类/多单类分项不能合并成本；该项未计入已知小计"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "sec-a 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "sec-b 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "2"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null,
+        "result.known_subtotal": "0"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-block-nested-security-split",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "nested-a",
+            "scope_id": "nested-a",
+            "domain": "total",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "1"
+          },
+          {
+            "id": "sec-b",
+            "scope_id": "sec-b",
+            "domain": "security",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "1",
+            "security_scope_size": "1"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_review",
+        "result": {
+          "entries": [
+            {
+              "id": "nested-a",
+              "included_known_subtotal": "0",
+              "status": "calculated",
+              "excluded_pending_review": true
+            },
+            {
+              "id": "sec-b",
+              "included_known_subtotal": "0",
+              "status": "calculated",
+              "excluded_pending_review": true
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "0",
+          "currency": "CNY",
+          "missing_costs": [
+            "nested-a",
+            "sec-b"
+          ]
+        },
+        "issues": [
+          {
+            "code": "S01/N01",
+            "message": "嵌套汇总含多个安全分类；该子汇总未计入已知小计"
+          },
+          {
+            "code": "S01/N01",
+            "message": "多安全分类/多单类分项不能合并成本；该项未计入已知小计"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "nested-a 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "sec-b 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "0",
+          "issues": [
+            {
+              "code": "S01/N01",
+              "message": "嵌套汇总含多个安全分类；该子汇总未计入已知小计"
+            },
+            {
+              "code": "S01/N01",
+              "message": "多安全分类/多单类分项不能合并成本；该项未计入已知小计"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "nested-a 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "sec-b 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "2"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null,
+        "result.known_subtotal": "0"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-no-overlap-attestation",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": false,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "non_overlap_confirmed 尚未确认"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-forged-complete-with-issues",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "12088",
+            "issues": [
+              {
+                "code": "N04",
+                "message": "证据待核查"
+              }
+            ],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "calculated状态仍含未解决问题，不能伪装完整"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-inconsistent-complete-subtotal",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "12088",
+            "known_subtotal": "1",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "完整金额与已知小计不一致"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "total-review-without-message-stays-review",
+      "passed": true,
+      "input": {
+        "mode": "total",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-total",
+        "expected_level": "service_total",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "entries": [
+          {
+            "id": "demo-environment",
+            "scope_id": "demo-environment",
+            "domain": "environment",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "needs_review",
+            "amount": null,
+            "known_subtotal": "12088",
+            "issues": [],
+            "security_scope_count": "0"
+          },
+          {
+            "id": "demo-software_cost",
+            "scope_id": "demo-software_cost",
+            "domain": "software",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "level": "service_total",
+            "status": "calculated",
+            "amount": "113759.04",
+            "known_subtotal": "113759.04",
+            "issues": [],
+            "security_scope_count": "0"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "total",
+        "status": "needs_review",
+        "result": {
+          "entries": [
+            {
+              "id": "demo-environment",
+              "included_known_subtotal": "12088",
+              "status": "needs_review",
+              "excluded_pending_review": false
+            },
+            {
+              "id": "demo-software_cost",
+              "included_known_subtotal": "113759.04",
+              "status": "calculated",
+              "excluded_pending_review": false
+            }
+          ],
+          "amount": null,
+          "known_subtotal": "125847.04",
+          "currency": "CNY",
+          "missing_costs": [
+            "demo-environment"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UPSTREAM_REVIEW",
+            "message": "demo-environment 上游待核查状态保留"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "demo-environment 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-total",
+          "scope_id": "demo-total",
+          "domain": "total",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "needs_review",
+          "amount": null,
+          "known_subtotal": "125847.04",
+          "issues": [
+            {
+              "code": "UPSTREAM_REVIEW",
+              "message": "demo-environment 上游待核查状态保留"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "demo-environment 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "needs_review",
+        "result.amount": null
+      },
+      "errors": []
+    },
+    {
+      "id": "software-two-conversion-forms-rejected",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_month",
+            "conversion": {
+              "from_unit": "person_hour",
+              "to_unit": "person_month",
+              "divisor": "160",
+              "multiplier": "0.00625",
+              "source": "合成"
+            }
+          }
+        ],
+        "direct_nonhuman": "1200"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "conversion必须且只能提供multiplier或divisor之一"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "software-zero-conversion-rejected",
+      "passed": true,
+      "input": {
+        "mode": "software_cost",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-software_cost",
+        "method": "8.2.1",
+        "composite_rate_confirmed": true,
+        "classes": [
+          {
+            "id": "s1",
+            "workload": "703.494",
+            "workload_unit": "person_hour",
+            "rate": "160",
+            "rate_unit": "CNY/person_month",
+            "conversion": {
+              "from_unit": "person_hour",
+              "to_unit": "person_month",
+              "divisor": "0",
+              "source": "合成"
+            }
+          }
+        ],
+        "direct_nonhuman": "1200"
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "software_cost",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "divisor 必须大于0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-infinite-rejected",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "Infinity",
+            "price_factor": "1.05"
+          }
+        ],
+        "other_costs": {
+          "direct_nonhuman": "600",
+          "indirect_labor": "300",
+          "indirect_nonhuman": "100"
+        }
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "INPUT_REQUIRED",
+            "message": "rate 必须是有限十进制字符串"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input"
+      },
+      "errors": []
+    },
+    {
+      "id": "hardware-unknown-zero-not-imputed",
+      "passed": true,
+      "input": {
+        "mode": "hardware",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-hardware",
+        "workload_unit": "person_day",
+        "rate_unit": "CNY/person_day",
+        "classes": [
+          {
+            "id": "c1",
+            "quantity": "8",
+            "unit_workload": "1.5",
+            "workload_factor": "1.1",
+            "rate": "800",
+            "price_factor": "1.05"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "hardware",
+        "status": "partial",
+        "result": {
+          "classes": [
+            {
+              "id": "c1",
+              "workload": "13.2",
+              "direct_labor": "11088"
+            }
+          ],
+          "workload": "13.2",
+          "workload_unit": "person_day",
+          "workload_complete": true,
+          "direct_labor": "11088",
+          "other_costs": {
+            "direct_nonhuman": null,
+            "indirect_labor": null,
+            "indirect_nonhuman": null
+          },
+          "amount": null,
+          "known_subtotal": "11088",
+          "currency": "CNY",
+          "missing_costs": [
+            "direct_nonhuman",
+            "indirect_labor",
+            "indirect_nonhuman"
+          ]
+        },
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_nonhuman 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_labor 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_nonhuman 未确定；不得视为0"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding",
+        "summary": {
+          "id": "demo-hardware",
+          "scope_id": "demo-hardware",
+          "domain": "hardware",
+          "period": "2027全年（合成演练）",
+          "currency": "CNY",
+          "level": "service_total",
+          "status": "partial",
+          "amount": null,
+          "known_subtotal": "11088",
+          "issues": [
+            {
+              "code": "UNKNOWN_COST",
+              "message": "direct_nonhuman 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "indirect_labor 未确定；不得视为0"
+            },
+            {
+              "code": "UNKNOWN_COST",
+              "message": "indirect_nonhuman 未确定；不得视为0"
+            }
+          ],
+          "security_scope_count": "0"
+        }
+      },
+      "checks": {
+        "status": "partial",
+        "result.amount": null,
+        "result.known_subtotal": "11088"
+      },
+      "errors": []
+    },
+    {
+      "id": "nonhuman-duplicate-line",
+      "passed": true,
+      "input": {
+        "mode": "nonhuman",
+        "period": "2027全年（合成演练）",
+        "currency": "CNY",
+        "scope_id": "demo-nonhuman",
+        "coverage_complete": true,
+        "non_overlap_confirmed": true,
+        "items": [
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          },
+          {
+            "id": "tool-secondary-dev",
+            "amount": "600",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：专用工具二次开发"
+          },
+          {
+            "id": "tool-depreciation",
+            "amount": "1300",
+            "period": "2027全年（合成演练）",
+            "currency": "CNY",
+            "basis": "合成：合同周期软件工具折旧"
+          }
+        ]
+      },
+      "output": {
+        "calculator_version": "1.0.0-restricted",
+        "mode": "nonhuman",
+        "status": "needs_input",
+        "result": {},
+        "issues": [
+          {
+            "code": "DUPLICATE",
+            "message": "items 存在重复id"
+          }
+        ],
+        "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+        "precision": "Decimal 80 significant digits; no currency rounding"
+      },
+      "checks": {
+        "status": "needs_input",
+        "issues.0.code": "DUPLICATE"
+      },
+      "errors": []
+    },
+    {
+      "id": "cli-bom-unicode-output",
+      "passed": true,
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "id": "cli-needs-input-exit-code",
+      "passed": true,
+      "returncode": 2
+    },
+    {
+      "id": "cli-invalid-json",
+      "passed": true,
+      "returncode": 2
+    },
+    {
+      "id": "cli-portable-standalone",
+      "passed": true,
+      "returncode": 0
+    }
+  ]
+}

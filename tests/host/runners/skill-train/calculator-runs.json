@@ -1,0 +1,86 @@
+[
+  {
+    "case_id": "O06",
+    "calculation": "known-unit-workload",
+    "mode": "decimal_partial_or_interface_fallback",
+    "status": "executed",
+    "reason": "指定计算器unit_workload模式要求完整活动或有依据裁剪；响应次数缺失，不能虚构完整输入。只精确复算已知例行操作部分。"
+  },
+  {
+    "case_id": "O07",
+    "calculation": "environment",
+    "mode": "environment",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O11",
+    "calculation": "fp-size",
+    "mode": "decimal_partial_or_interface_fallback",
+    "status": "executed",
+    "reason": "显式需求蔓延因子已给，算式完整；计算器FP接口还强制要求题目未展开的特殊要求布尔值，不能编造该标记。按已定因子精确复算。"
+  },
+  {
+    "case_id": "O11",
+    "calculation": "set-size",
+    "mode": "software_size",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O13",
+    "calculation": "software-workload",
+    "mode": "software_workload",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O14",
+    "calculation": "productivity-conversion",
+    "mode": "decimal_partial_or_interface_fallback",
+    "status": "executed",
+    "reason": "依据题目明确的非零FP/人时单位，显式取倒数；MCF缺失，仅计算生产率转换和未调整基数。"
+  },
+  {
+    "case_id": "O15",
+    "calculation": "software-cost",
+    "mode": "software_cost",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O17",
+    "calculation": "security",
+    "mode": "security",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O19",
+    "calculation": "management",
+    "mode": "management",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O25",
+    "calculation": "software-tools",
+    "mode": "nonhuman",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O25",
+    "calculation": "hardware-tools",
+    "mode": "nonhuman",
+    "status": "calculated",
+    "returncode": 0
+  },
+  {
+    "case_id": "O25",
+    "calculation": "nonhuman-total",
+    "mode": "nonhuman",
+    "status": "calculated",
+    "returncode": 0
+  }
+]

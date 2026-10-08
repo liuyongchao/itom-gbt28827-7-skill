@@ -1,0 +1,49 @@
+{
+  "template_only": true,
+  "notice": "本模板为人工/agent取证表，不能直接作为计算器输入；脚本输入见CALCULATOR.md。null表示待补，不能默认0或1。",
+  "project": {
+    "name": null,
+    "period": null,
+    "currency": "CNY",
+    "purpose": null,
+    "source_version": "GB/T28827.7-2022"
+  },
+  "scope_items": [
+    {
+      "id": "S001",
+      "object": null,
+      "service": null,
+      "category": null,
+      "quantity": null,
+      "unit": null,
+      "included": null,
+      "evidence": null
+    }
+  ],
+  "parameters": [
+    {
+      "name": null,
+      "value": null,
+      "unit": null,
+      "baseline": null,
+      "source": null,
+      "period": null,
+      "application_layer": null
+    }
+  ],
+  "cost_items": [
+    {
+      "id": "C001",
+      "scope_ids": [],
+      "category": null,
+      "level": null,
+      "amount": null,
+      "unit": "CNY",
+      "period": null,
+      "already_included": [],
+      "evidence": null,
+      "status": "missing"
+    }
+  ],
+  "unresolved": []
+}

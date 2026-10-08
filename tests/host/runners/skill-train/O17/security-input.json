@@ -1,0 +1,24 @@
+{
+  "currency": "CNY",
+  "scope_id": "O17-security",
+  "period": "2026年度合同期间",
+  "mode": "security",
+  "scope_size": "1",
+  "workload_unit": "person_day",
+  "rate_unit": "CNY/person_day",
+  "classes": [
+    {
+      "id": "全范围唯一安全类别",
+      "quantity": "5",
+      "unit_workload": "0.6",
+      "workload_factor": "1.2",
+      "rate": "950",
+      "price_factor": "1.1"
+    }
+  ],
+  "other_costs": {
+    "direct_nonhuman": "400",
+    "indirect_labor": "250",
+    "indirect_nonhuman": "150"
+  }
+}

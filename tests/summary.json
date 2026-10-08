@@ -1,0 +1,22 @@
+{
+  "planned_actual_outputs": 56,
+  "completed_actual_outputs": 56,
+  "mechanical": {
+    "new_skill": 28,
+    "without_skill": 28,
+    "denominator_per_variant": 28
+  },
+  "semantic": {
+    "new_skill": 28,
+    "without_skill": 24,
+    "denominator_per_variant": 28
+  },
+  "trigger_initial": "8/9",
+  "trigger_regression": "9/9",
+  "trigger_fresh_holdout": "3/3",
+  "calculator_regression": "85/85",
+  "final_training_calculator_replay": "9/9",
+  "model_id": "unavailable",
+  "token_usage": "unavailable",
+  "full_standard_implementation": false
+}

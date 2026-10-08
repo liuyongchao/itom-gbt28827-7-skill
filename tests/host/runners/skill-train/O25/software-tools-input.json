@@ -1,0 +1,38 @@
+{
+  "currency": "CNY",
+  "scope_id": "O25-software-tools",
+  "period": "2026年度合同期间",
+  "mode": "nonhuman",
+  "coverage_complete": true,
+  "non_overlap_confirmed": true,
+  "items": [
+    {
+      "id": "软件工具折旧",
+      "amount": "500",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "basis": "用户合成测试题给定并经项目双方核定；不代表现实市场价格；已归属本合同年度，无共享重复"
+    },
+    {
+      "id": "软件工具管理",
+      "amount": "100",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "basis": "用户合成测试题给定并经项目双方核定；不代表现实市场价格；已归属本合同年度，无共享重复"
+    },
+    {
+      "id": "软件工具二次开发",
+      "amount": "200",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "basis": "用户合成测试题给定并经项目双方核定；不代表现实市场价格；已归属本合同年度，无共享重复"
+    },
+    {
+      "id": "软件工具其他",
+      "amount": "50",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "basis": "用户合成测试题给定并经项目双方核定；不代表现实市场价格；已归属本合同年度，无共享重复"
+    }
+  ]
+}

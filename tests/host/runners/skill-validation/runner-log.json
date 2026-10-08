@@ -1,0 +1,39 @@
+{
+  "runner": "skill-validation",
+  "task_file": "work/itom-evals/validation-tasks.json",
+  "skill_file": "outputs/itom-cost-gbt28827-7-2022/skills/itom-cost-gbt28827-7/SKILL.md",
+  "start_time": "2026-10-08T22:29:50.6969266+08:00",
+  "start_time_note": "这是首次显式读取系统时钟的可观测时刻；在此之前已完成任务文件和技能入口的首次读取，精确首个调用开始时间不可得。",
+  "end_time": "2026-10-08T22:34:56.934061+08:00",
+  "tool_calls": {
+    "host_exec_command_calls": 12,
+    "functions_exec_orchestration_calls": 6,
+    "combined_visible_calls": 18,
+    "calculator_subprocess_runs": 8,
+    "web_calls": 0,
+    "child_agent_calls": 0
+  },
+  "tool_count_note": "宿主文件读取/命令调用12次；functions.exec编排6次分别承载1、1、4、4、1、1个宿主调用。计算器8次是单个宿主调用内的子进程执行。均未超过25次预算。",
+  "model_version": null,
+  "model_version_note": "没有可核验的执行时具体模型版本信息，不据角色文字猜测具体版本。",
+  "token_usage": null,
+  "token_usage_note": "执行环境未向本执行者提供可靠token计数。",
+  "python_version": "3.10.8",
+  "calculator_version": "1.0.1-restricted",
+  "cases_completed": [
+    "O01",
+    "O03",
+    "O04",
+    "O05",
+    "O08",
+    "O09",
+    "O18",
+    "O21",
+    "O23",
+    "O24",
+    "O27"
+  ],
+  "files_format": "每项output.md内容为完整UTF-8 JSON对象；数值结果使用十进制字符串。",
+  "source_access": "仅读取所指定任务文件、技能入口、相关内部能力卡和CALCULATOR.md；执行指定itom_calc.py并读取本执行者生成的计算结果。未浏览网络或访问其他执行者、原书、评分、预期、训练或审查材料。",
+  "structural_verification": "已检查11项JSON结构、必需字段、状态枚举、数值字符串及与实际计算器输出的一致性。未评价通过率。"
+}

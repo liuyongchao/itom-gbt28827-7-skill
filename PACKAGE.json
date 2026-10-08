@@ -1,0 +1,27 @@
+{
+  "name": "itom-cost-gbt28827-7",
+  "version": "0.1.0-restricted-draft",
+  "build_date": "2026-10-08",
+  "mode": "single",
+  "entrypoint_count": 1,
+  "capability_count": 14,
+  "source": "GB/T 28827.7-2022 supplied PDF",
+  "source_sha256": "167a474c7bc077510f8c135a539fc0e7b83e065a81c94b56bdb7b0ba5a513dc9",
+  "source_pages": 38,
+  "installed": false,
+  "published": true,
+  "unresolved_groups": [
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06"
+  ],
+  "runtime": "Python 3.9+ standard library",
+  "compiler": "cangjie-skill 2.5.0",
+  "source_pdf_included": false,
+  "repository_url": "https://github.com/liuyongchao/itom-gbt28827-7-skill",
+  "skill_url": "https://github.com/liuyongchao/itom-gbt28827-7-skill/tree/main/skills/itom-cost-gbt28827-7",
+  "publication_status": "prepared_for_publication"
+}

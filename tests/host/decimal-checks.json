@@ -1,0 +1,498 @@
+[
+  {
+    "case_id": "O06",
+    "variant": "new_skill",
+    "key": "known_unit_workload",
+    "actual": "2.4",
+    "expected": "2.4",
+    "passed": true
+  },
+  {
+    "case_id": "O07",
+    "variant": "new_skill",
+    "key": "workload",
+    "actual": "7.2",
+    "expected": "7.2",
+    "passed": true
+  },
+  {
+    "case_id": "O07",
+    "variant": "new_skill",
+    "key": "direct_labor",
+    "actual": "6336",
+    "expected": "6336",
+    "passed": true
+  },
+  {
+    "case_id": "O07",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "7436",
+    "expected": "7436",
+    "passed": true
+  },
+  {
+    "case_id": "O11",
+    "variant": "new_skill",
+    "key": "adjusted_fp",
+    "actual": "280.00",
+    "expected": "280",
+    "passed": true
+  },
+  {
+    "case_id": "O11",
+    "variant": "new_skill",
+    "key": "adjusted_sets",
+    "actual": "3.24",
+    "expected": "3.24",
+    "passed": true
+  },
+  {
+    "case_id": "O13",
+    "variant": "new_skill",
+    "key": "workload",
+    "actual": "300.96",
+    "expected": "300.96",
+    "passed": true
+  },
+  {
+    "case_id": "O15",
+    "variant": "new_skill",
+    "key": "rate_subtotal",
+    "actual": "20800",
+    "expected": "20800",
+    "passed": true
+  },
+  {
+    "case_id": "O15",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "21700",
+    "expected": "21700",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "variant": "new_skill",
+    "key": "workload",
+    "actual": "3.6",
+    "expected": "3.6",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "variant": "new_skill",
+    "key": "direct_labor",
+    "actual": "3762",
+    "expected": "3762",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "4562",
+    "expected": "4562",
+    "passed": true
+  },
+  {
+    "case_id": "O19",
+    "variant": "new_skill",
+    "key": "direct_labor",
+    "actual": "4980",
+    "expected": "4980",
+    "passed": true
+  },
+  {
+    "case_id": "O19",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "5980",
+    "expected": "5980",
+    "passed": true
+  },
+  {
+    "case_id": "O22",
+    "variant": "new_skill",
+    "key": "known_material",
+    "actual": "500",
+    "expected": "500",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "variant": "new_skill",
+    "key": "software_tools",
+    "actual": "850",
+    "expected": "850",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "variant": "new_skill",
+    "key": "hardware_tools",
+    "actual": "1300",
+    "expected": "1300",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "2300",
+    "expected": "2300",
+    "passed": true
+  },
+  {
+    "case_id": "O28",
+    "variant": "new_skill",
+    "key": "known_nonoverlapping_subtotal",
+    "actual": "10000",
+    "expected": "10000",
+    "passed": true
+  },
+  {
+    "case_id": "O03",
+    "variant": "new_skill",
+    "key": "direct_part_time",
+    "actual": "4800",
+    "expected": "4800",
+    "passed": true
+  },
+  {
+    "case_id": "O03",
+    "variant": "new_skill",
+    "key": "indirect_allocation",
+    "actual": "2400",
+    "expected": "2400",
+    "passed": true
+  },
+  {
+    "case_id": "O05",
+    "variant": "new_skill",
+    "key": "unit_workload",
+    "actual": "6.6",
+    "expected": "6.6",
+    "passed": true
+  },
+  {
+    "case_id": "O08",
+    "variant": "new_skill",
+    "key": "direct_labor",
+    "actual": "6336",
+    "expected": "6336",
+    "passed": true
+  },
+  {
+    "case_id": "O09",
+    "variant": "new_skill",
+    "key": "labor_a",
+    "actual": "3240",
+    "expected": "3240",
+    "passed": true
+  },
+  {
+    "case_id": "O09",
+    "variant": "new_skill",
+    "key": "labor_b",
+    "actual": "3168",
+    "expected": "3168",
+    "passed": true
+  },
+  {
+    "case_id": "O09",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "7808",
+    "expected": "7808",
+    "passed": true
+  },
+  {
+    "case_id": "O18",
+    "variant": "new_skill",
+    "key": "total_workload",
+    "actual": "8",
+    "expected": "8",
+    "passed": true
+  },
+  {
+    "case_id": "O21",
+    "variant": "new_skill",
+    "key": "workload",
+    "actual": "5.7024",
+    "expected": "5.7024",
+    "passed": true
+  },
+  {
+    "case_id": "O21",
+    "variant": "new_skill",
+    "key": "direct_labor",
+    "actual": "6842.88",
+    "expected": "6842.88",
+    "passed": true
+  },
+  {
+    "case_id": "O21",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "7842.88",
+    "expected": "7842.88",
+    "passed": true
+  },
+  {
+    "case_id": "O27",
+    "variant": "new_skill",
+    "key": "total",
+    "actual": "36944",
+    "expected": "36944",
+    "passed": true
+  },
+  {
+    "case_id": "O06",
+    "variant": "without_skill",
+    "key": "known_unit_workload",
+    "actual": "2.4",
+    "expected": "2.4",
+    "passed": true
+  },
+  {
+    "case_id": "O07",
+    "variant": "without_skill",
+    "key": "workload",
+    "actual": "7.2",
+    "expected": "7.2",
+    "passed": true
+  },
+  {
+    "case_id": "O07",
+    "variant": "without_skill",
+    "key": "direct_labor",
+    "actual": "6336",
+    "expected": "6336",
+    "passed": true
+  },
+  {
+    "case_id": "O07",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "7436",
+    "expected": "7436",
+    "passed": true
+  },
+  {
+    "case_id": "O11",
+    "variant": "without_skill",
+    "key": "adjusted_fp",
+    "actual": "280",
+    "expected": "280",
+    "passed": true
+  },
+  {
+    "case_id": "O11",
+    "variant": "without_skill",
+    "key": "adjusted_sets",
+    "actual": "3.24",
+    "expected": "3.24",
+    "passed": true
+  },
+  {
+    "case_id": "O13",
+    "variant": "without_skill",
+    "key": "workload",
+    "actual": "300.96",
+    "expected": "300.96",
+    "passed": true
+  },
+  {
+    "case_id": "O15",
+    "variant": "without_skill",
+    "key": "rate_subtotal",
+    "actual": "20800",
+    "expected": "20800",
+    "passed": true
+  },
+  {
+    "case_id": "O15",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "21700",
+    "expected": "21700",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "variant": "without_skill",
+    "key": "workload",
+    "actual": "3.6",
+    "expected": "3.6",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "variant": "without_skill",
+    "key": "direct_labor",
+    "actual": "3762",
+    "expected": "3762",
+    "passed": true
+  },
+  {
+    "case_id": "O17",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "4562",
+    "expected": "4562",
+    "passed": true
+  },
+  {
+    "case_id": "O19",
+    "variant": "without_skill",
+    "key": "direct_labor",
+    "actual": "4980",
+    "expected": "4980",
+    "passed": true
+  },
+  {
+    "case_id": "O19",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "5980",
+    "expected": "5980",
+    "passed": true
+  },
+  {
+    "case_id": "O22",
+    "variant": "without_skill",
+    "key": "known_material",
+    "actual": "500",
+    "expected": "500",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "variant": "without_skill",
+    "key": "software_tools",
+    "actual": "850",
+    "expected": "850",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "variant": "without_skill",
+    "key": "hardware_tools",
+    "actual": "1300",
+    "expected": "1300",
+    "passed": true
+  },
+  {
+    "case_id": "O25",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "2300",
+    "expected": "2300",
+    "passed": true
+  },
+  {
+    "case_id": "O28",
+    "variant": "without_skill",
+    "key": "known_nonoverlapping_subtotal",
+    "actual": "10000",
+    "expected": "10000",
+    "passed": true
+  },
+  {
+    "case_id": "O03",
+    "variant": "without_skill",
+    "key": "direct_part_time",
+    "actual": "4800",
+    "expected": "4800",
+    "passed": true
+  },
+  {
+    "case_id": "O03",
+    "variant": "without_skill",
+    "key": "indirect_allocation",
+    "actual": "2400",
+    "expected": "2400",
+    "passed": true
+  },
+  {
+    "case_id": "O05",
+    "variant": "without_skill",
+    "key": "unit_workload",
+    "actual": "6.6",
+    "expected": "6.6",
+    "passed": true
+  },
+  {
+    "case_id": "O08",
+    "variant": "without_skill",
+    "key": "direct_labor",
+    "actual": "6336",
+    "expected": "6336",
+    "passed": true
+  },
+  {
+    "case_id": "O09",
+    "variant": "without_skill",
+    "key": "labor_a",
+    "actual": "3240",
+    "expected": "3240",
+    "passed": true
+  },
+  {
+    "case_id": "O09",
+    "variant": "without_skill",
+    "key": "labor_b",
+    "actual": "3168",
+    "expected": "3168",
+    "passed": true
+  },
+  {
+    "case_id": "O09",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "7808",
+    "expected": "7808",
+    "passed": true
+  },
+  {
+    "case_id": "O18",
+    "variant": "without_skill",
+    "key": "total_workload",
+    "actual": "8",
+    "expected": "8",
+    "passed": true
+  },
+  {
+    "case_id": "O21",
+    "variant": "without_skill",
+    "key": "workload",
+    "actual": "5.7024",
+    "expected": "5.7024",
+    "passed": true
+  },
+  {
+    "case_id": "O21",
+    "variant": "without_skill",
+    "key": "direct_labor",
+    "actual": "6842.88",
+    "expected": "6842.88",
+    "passed": true
+  },
+  {
+    "case_id": "O21",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "7842.88",
+    "expected": "7842.88",
+    "passed": true
+  },
+  {
+    "case_id": "O27",
+    "variant": "without_skill",
+    "key": "total",
+    "actual": "36944",
+    "expected": "36944",
+    "passed": true
+  }
+]

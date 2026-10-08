@@ -1,0 +1,43 @@
+{
+  "calculator_version": "1.0.0-restricted",
+  "mode": "environment",
+  "status": "calculated",
+  "result": {
+    "classes": [
+      {
+        "id": "基础环境",
+        "workload": "7.2",
+        "direct_labor": "6336"
+      }
+    ],
+    "workload": "7.2",
+    "workload_unit": "person_day",
+    "workload_complete": true,
+    "direct_labor": "6336",
+    "other_costs": {
+      "direct_nonhuman": "600",
+      "indirect_labor": "300",
+      "indirect_nonhuman": "200"
+    },
+    "amount": "7436",
+    "known_subtotal": "7436",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O07-environment",
+    "scope_id": "O07-environment",
+    "domain": "environment",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "service_total",
+    "status": "calculated",
+    "amount": "7436",
+    "known_subtotal": "7436",
+    "issues": [],
+    "security_scope_count": "0"
+  }
+}

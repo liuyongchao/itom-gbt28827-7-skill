@@ -1,0 +1,35 @@
+{
+  "currency": "CNY",
+  "scope_id": "O19-management",
+  "period": "2026年度合同期间",
+  "mode": "management",
+  "workload_unit": "person_day",
+  "rate_unit": "CNY/person_day",
+  "classes": [
+    {
+      "id": "规划设计",
+      "category": "planning",
+      "occurrences": "2",
+      "unit_workload": "1.5",
+      "rate": "1100",
+      "price_factor": "1.1"
+    },
+    {
+      "id": "质量管控",
+      "category": "quality",
+      "occurrences": "3",
+      "unit_workload": "0.5",
+      "rate": "900",
+      "price_factor": "1"
+    }
+  ],
+  "excluded_categories": {
+    "delivery": "题目明确交付管理本范围不发生",
+    "review": "题目明确总结改进本范围不发生"
+  },
+  "other_costs": {
+    "direct_nonhuman": "500",
+    "indirect_labor": "300",
+    "indirect_nonhuman": "200"
+  }
+}

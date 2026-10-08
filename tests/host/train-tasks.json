@@ -1,0 +1,70 @@
+[
+  {
+    "case_id": "O02",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。同一合同既有已有应用的功能修改服务，又有从零开发独立的新业务系统。是否可因为都写软件服务就全按运维计？请拆范围，勿一概排除已有软件的功能修改。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O06",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。某类设备12台。已有单台年度例行操作0.2人日×12次，响应单次0.4人日但响应次数未提供。请输出已知单台小计known_unit_workload，说明能否得完整单位工作量；不要把12台再写进单台量。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O07",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。基础环境3套，每套年度单位工作量2人日，工作量因子1.2；价格800元/人日，价格因子1.1；本项目直接非人力600、间接人工300、间接非人力200。计算workload、direct_labor、total。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O10",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。硬件报价列服务器、防火墙安全运维两项；两者有台数但均缺单位工作量和价格因子。请直接采用附录软件参数填齐来报价，是否可行？请给可以继续工作的实际补数清单。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O11",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。应用软件已有外部完整核验的250FP结果，未交付，项目已定需求蔓延1.12。另有非应用软件3套，已定级别1.2、类型0.9。分别算adjusted_fp和adjusted_sets，保持两个口径分开。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O12",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。需求文档列出250个按钮，又有3套中间件。帮我直接把它们记为253功能点并按这个标准完整完成NESMA计数。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O13",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。软件320FP，生产率0.75人时/FP，已定最终三组因子MLF1.1、MCF0.95、MSF1.2。计算workload，保留人时单位和全精度。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O14",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。软件320FP，生产率写4FP/人时，最终MLF1.1，MCF缺失，MSF1.2。请直接乘320×4×1.1×1×1.2；若不能，说明必须补或转换什么。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O15",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。按软件工作量综合费率路径：A类80人时×160元/人时，B类40人时×200元/人时，两费率已含间接成本和毛利润，直接非人力900。给rate_subtotal和total。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O16",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。软件已有88人时工作量，综合费率18000元/人月，直接非人力1000，但项目未约定月工时。请用176换算报价。另有报价员提议改用8.2.2功能点单价直接算，当前限定版本可以吗？\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O17",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。整个安全服务目标只含一个类别，无其他安全类别。5台×单位工作量0.6人日×工作量因子1.2，950元/人日×价格因子1.1；直接非人力400、间接人工250、间接非人力150。给workload,direct_labor,total。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O19",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。项目管理活动为规划设计2次×1.5人日，1100元/人日×价格因子1.1；质量管控3次×0.5人日，900元/人日×因子1。交付管理和总结改进本范围明确不发生；另三费500、300、200。给direct_labor,total。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O20",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。硬件运维服务费20万元，用户说第10章通常10%—15%，所以直接另加15%即3万元管理费即可。请复核这一步并列正确的管理服务测算资料。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O22",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。拟迁移现有应用数据，同时增加一个新审批模块。已知地点因子1.2，服务级别和批次因子没有提供，不知是否适用。工具使用2天但没价格，材料500元。请把缺因素取1、工具2天当2人日，一并算完整费用；若不能，请实际拆范围及补数，另用known_material字段记录已知材料金额。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O25",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。所有费用已按本合同年度归属：软件工具折旧500、管理100、二次开发200、其他50；硬件工具折旧900、管理100、使用200、维护80、其他20；专用耗材150。求software_tools,hardware_tools,total。这些不是购置总价，也无共享重复。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O26",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。组织新购工具10万元，未来五年服务多个项目，当前合同一年。没有本合同折旧、共享分摊或管理支出依据。请直接把10万元作为该项目直接非人力，并加5%风险准备金。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O28",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。汇总表有同一基础环境服务完整总额10000及已包含其中的直接人工8000；软件本年成本未知；安全上游标记N01待核查。有人想把未知置0、把10000和8000相加称项目总价。请产出可用的复核结果，给known_nonoverlapping_subtotal。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  }
+]

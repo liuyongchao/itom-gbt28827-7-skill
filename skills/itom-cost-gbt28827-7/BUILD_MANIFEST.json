@@ -1,0 +1,50 @@
+{
+  "tool": "cangjie-tools v2.5.0",
+  "published_hashes": {
+    "references\\capabilities\\cost-ledger.md": "1fe720d4a326d892372397993466a711203cbff15a32908a3aaad5602d6b5728",
+    "references\\capabilities\\environment-cost.md": "8424888e1f91b8ac1eccbb7fa93aade0688af28cd71c034a48e2825b32fbde20",
+    "references\\capabilities\\hardware-cost.md": "2385612adf589dec87180dc810db8c3b5d8724128288701efde852b151d580ab",
+    "references\\capabilities\\management-cost.md": "b9436262851721965e3ee296a308a14689b1bf3244345c8ee477330a4f833835",
+    "references\\capabilities\\migration-cost.md": "3c75a11acb6614f392f42f250fda200374724e0247594a9c658338a470d2a880",
+    "references\\capabilities\\nonhuman-cost.md": "9bcd7e9e64a12a9d3e68279b966018e0b74ca27f3f68231dc7e83483d0865aa9",
+    "references\\capabilities\\parameter-evidence.md": "4c87afbe5b5ca8b8a68ca1bba034b85d8b053e2c171e8b13bc04946c26e21d5f",
+    "references\\capabilities\\scope-routing.md": "08fcc9e41b214568aa737c30d14aa5611cc074cbc57acc6d36f662da141b4026",
+    "references\\capabilities\\security-cost.md": "502db840550f441f404de8e04b40e71aa36c2d2178f7b05cdaa91b4344088f7c",
+    "references\\capabilities\\software-effort-cost.md": "e03cb5741f364b41a814010b95623b3b82418976235bb7cb4c363d3fb30cd2f6",
+    "references\\capabilities\\software-size.md": "b8be3b9cf4d12b92ff75ee862ef2784769fdfca58d7037d708581263af09ee8a",
+    "references\\capabilities\\software-workload.md": "c42ebbd63ecc5efb6fead6b8fc5923dc3ae60d76ead2af3cd7c5100e3cd3b3d0",
+    "references\\capabilities\\total-review.md": "fd657b199a18b596a4f2592f386414cf8117d33f3d74d201a6a8eddca579567a",
+    "references\\capabilities\\unit-workload.md": "69d3c2a527cd954da58b1cf778ef85f30a6aac27333a00990681f9b26bca3f7c",
+    "references\\capability-index.md": "3735663cf728f96c16832651bfbec35202a46d23e889cdf1a53b0dca6a2ba7dd",
+    "references\\cheatsheet.md": "ea0a4c48986cc1560cf8920a76f9789373928c7c30d8369ebd44d6e279bb789d",
+    "references\\glossary.md": "af894053a56a7e41f437d145df11dfcff9986017d45280995b83d41c2dbe9443",
+    "references\\overview.md": "0507a18a14d665df87b22e224c59d591ba463b3db59d2857ad7eff3c527ee69d",
+    "resources\\CALCULATOR.md": "71f28584e4a2993050491f10a561758f4e0605b85095a9cbf1c3d4b5f3a505a3",
+    "resources\\example-inputs.json": "1afb5495c3823cab0fa66f5ff0c319ddc3e18bc14ff59be826f8a3f4e3214549",
+    "resources\\itom_calc.py": "c9f10a58540e8727b8e0604bdd7103725d84089033c63554a64c0f1719d53469",
+    "resources\\parameter-register.csv": "0b165f845c2cf9b3331cdeba4de4c2fb06f1444f99e252bf8f6ddaf78a2083f1",
+    "resources\\project-template.json": "a10d14092522d56df654c6d02dfc42b2cf580fe7c6c0ea07dd1f3d95884da627",
+    "resources\\scope-limitations.md": "5dfd2be03af60f6b59ccd1b4699e1c691ee0dd586500febabbd21a430c82d821",
+    "SKILL.md": "417f587dfb65f1d13fb6477a82700d296d0a8720a89af72168b995b53dd8fe1f"
+  },
+  "note": "update/重编译前比对 published_hashes；检测到本地手改不得静默覆盖",
+  "bundle_id": "bundle.itom-gbt28827-7-2022",
+  "bundle_sha256": "d67cfe92aa157df49b4f1d610e9857a86312c27f43edba4cfdfa7f0de34f69f9",
+  "variant": "single",
+  "run_id": "run-20261008-222848-b7ca67",
+  "decision": {
+    "schema_version": 1,
+    "requested": "single",
+    "selected": "single",
+    "decision_policy": "single-first-v1",
+    "skill_budget": 8,
+    "promoted_count": 0,
+    "capability_count": 14,
+    "reasons": [
+      "用户显式选择 single，auto 决策器不覆盖用户选择"
+    ],
+    "alternative": "compact pack（1 个来源路由入口 + 0 个晋级 Skill，共 1 个可发现入口）",
+    "user_confirmed": true,
+    "preserve_strategy_on_update": true
+  }
+}

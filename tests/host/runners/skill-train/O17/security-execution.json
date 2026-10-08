@@ -1,0 +1,14 @@
+{
+  "command": [
+    "C:\\Python\\Python310\\python.exe",
+    "-B",
+    "work\\itom-preview\\resources\\itom_calc.py",
+    "work\\itom-evals\\runners\\skill-train\\O17\\security-input.json",
+    "--out",
+    "work\\itom-evals\\runners\\skill-train\\O17\\security-output.json"
+  ],
+  "cwd": "work\\itom-evals\\runners\\skill-train\\O17",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

@@ -1,0 +1,13 @@
+{
+  "period": "2026年度合同期间",
+  "mode": "software_workload",
+  "size": "320",
+  "size_unit": "FP",
+  "productivity": "0.75",
+  "productivity_unit": "person_hour/FP",
+  "mlf": "1.1",
+  "mcf": "0.95",
+  "msf": "1.2",
+  "workload_unit": "person_hour",
+  "parameter_source": "用户合成测试题给定并经项目双方核定；不代表现实市场价格"
+}

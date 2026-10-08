@@ -1,0 +1,13 @@
+{
+  "calculator_version": "1.0.1-restricted",
+  "mode": "software_workload",
+  "status": "calculated",
+  "result": {
+    "workload": "300.96",
+    "workload_unit": "person_hour",
+    "size_unit": "FP"
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding"
+}

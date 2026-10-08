@@ -1,0 +1,618 @@
+[
+  {
+    "case_id": "O01",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "基础环境6、硬件7、安全9、软件8、管理10、其他11逐项正确。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "六项逐项给出对应模型及章节：空调维护第6章、服务器设备维护第7章、防火墙安全策略第9章、业务软件修复第8章、交付质量管理第10章、搬迁第11章。对服务器补丁实际属于操作系统或应用的情况补充软件分支，未破坏题定归类。"
+  },
+  {
+    "case_id": "O01",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": false,
+    "criteria": [
+      "基础环境6、硬件7、安全9、软件8、管理10、其他11逐项正确。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "已给出六项服务的相应模型，并合理区分服务器补丁对象；但明确未列任何具体章号，未完成固定检查项要求的6、7、9、8、10、11章逐项对应。此处章节本身是用户要求的交付内容，并非因未写技能名或内部问题编号而扣分。"
+  },
+  {
+    "case_id": "O02",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "新系统开发不能自动归运维；保留已有软件功能修改按8.1核查；需活动拆分。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O02",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "新系统开发不能自动归运维；保留已有软件功能修改按8.1核查；需活动拆分。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O03",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "两个工作量比例基数区分；直接人工4800、间接人工2400。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O03",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "两个工作量比例基数区分；直接人工4800、间接人工2400。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O04",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "已含间接利润不得重复加；分母0停止该分摊并补数，不将其视零。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O04",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "已含间接利润不得重复加；分母0停止该分摊并补数，不将其视零。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O05",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "6.6人日/单对象/年；四活动小计2,2,2,0.6。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O05",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "6.6人日/单对象/年；四活动小计2,2,2,0.6。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O06",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "未知响应次数非0；单台已知2.4，完整待补；数量不重复乘。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O06",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "未知响应次数非0；单台已知2.4，完整待补；数量不重复乘。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O07",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "每个阶段单位与三项另计费用清楚。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O07",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "每个阶段单位与三项另计费用清楚。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O08",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "只称已知直接人工6336、partial；三费用未知非0。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O08",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "只称已知直接人工6336、partial；三费用未知非0。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O09",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "每类匹配本类费率，三项费用完整。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O09",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "每类匹配本类费率，三项费用完整。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O10",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "安全对象路由9；不借软件案例填硬件缺项；补目录工时因子价格及证据。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O10",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "安全对象路由9；不借软件案例填硬件缺项；补目录工时因子价格及证据。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O11",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "分清FP与调整套数不相加；不重建计数。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O11",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "分清FP与调整套数不相加；不重建计数。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O12",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "按钮≠FP，套数≠FP，不253；外部方法/资料依赖；可以列核验所需信息。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O12",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "按钮≠FP，套数≠FP，不253；外部方法/资料依赖；可以列核验所需信息。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O13",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "320*.75*1.1*.95*1.2=300.96人时。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O13",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "320*.75*1.1*.95*1.2=300.96人时。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O14",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "不能直接把倒数效率代入；MCF缺失不得1；澄清单位倒数0.25可说明但不出完整W。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O14",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "不能直接把倒数效率代入；MCF缺失不得1；澄清单位倒数0.25可说明但不出完整W。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O15",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "综合费率小计不称纯直接人工；不另加间接利润。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O15",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "综合费率小计不称纯直接人工；不另加间接利润。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O16",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "176非默认；换算缺失不报价；8.2.2待N02不自动执行。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "完整满足检查项：明确176仅为资料性案例而非默认月工时；在双方未核定换算值时暂停报价，并给出以H为变量的公式；明确本限定版本的8.2.2功能点单价路径仍待来源口径核查，当前不执行，即使补齐FP和单价也不会自动启用。"
+  },
+  {
+    "case_id": "O16",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": false,
+    "criteria": [
+      "176非默认；换算缺失不报价；8.2.2待N02不自动执行。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "已拒绝未经约定采用176，正确指出单位不匹配并在换算缺失时暂停报价。但仅将8.2.2不可使用解释为当前限定信息未提供计算依据、不能仅凭条款号改用，未明确该限定版本的此路径本身仍待核查、即使补齐功能点和单价也不自动执行。缺少这一版本适用性限制；问题不在于未写N02编号。"
+  },
+  {
+    "case_id": "O17",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "确认整个目标n1且无安全多类聚合。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O17",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "确认整个目标n1且无安全多类聚合。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O18",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "保留8人日；不得拆单绕过N01，不给正式安全总额；needs_review。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "保留A类2人日、B类6人日及合计8人日；按整个目标有两类处理，明确拒绝拆为两个单类任务以绕过多类费用来源限制；未执行受限费用分支、未给正式安全总额，并以needs_review表达需先核查来源口径。"
+  },
+  {
+    "case_id": "O18",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": false,
+    "criteria": [
+      "保留8人日；不得拆单绕过N01，不给正式安全总额；needs_review。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "正确保留8人日，承认拆单不能证明多类模型适用性，且明确没有给出正式安全总成本。但仍将两类分别计价为1800、7200并汇总9000，实际执行了受限的多类金额分项及汇总路径；标为算术合计并未满足不拆单绕过来源限制的执行要求。此外status为partial，而固定检查项要求用needs_review表达尚未解决的来源适用性限制。不能把本回答误判为已经正式报价，但它仍未完整满足检查项。"
+  },
+  {
+    "case_id": "O19",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "规划3630+质量1350；三项1000；未按15%收费。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O19",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "规划3630+质量1350；三项1000；未按15%收费。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O20",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "拒绝金额自动15%；其为工作量注释；四管理活动/次数工时费率、避免已含重复。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "完整满足检查项：拒绝将20万元的15%直接作为应另收管理费，明确10%—15%是管理工作量与运维服务工作量规模的关系；列出规划设计、交付管理、质量管控、总结改进四类活动及次数、单位工作量、费率和价格因子，并要求核对原报价已含费用及分摊关系，避免重复收费。"
+  },
+  {
+    "case_id": "O20",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": false,
+    "criteria": [
+      "拒绝金额自动15%；其为工作量注释；四管理活动/次数工时费率、避免已含重复。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "已拒绝自动另加3万元，且列明四类管理活动、次数、工时、费率等测算资料及避免重复收费要求。但只说题给信息不足以把10%—15%当作自动计费规则，未解释该比例实际是管理工作量与运维服务工作量之间的关系，遗漏检查项中的关键概念纠正。把30000标为提议比例的算术复算本身不构成错误。"
+  },
+  {
+    "case_id": "O21",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "各乘数及单位明确，无重复工具/材料。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O21",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "各乘数及单位明确，无重复工具/材料。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O22",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "不把缺因子当不适用；工具天≠人工日；功能新增与表1迁移拆开；材料500只是已知项。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O22",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "不把缺因子当不适用；工具天≠人工日；功能新增与表1迁移拆开；材料500只是已知项。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O23",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "两个参数结构完整、workload与price层不同；未给价格基线不编造；登记不等于真实性证明。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "两参数均登记值、单位、基线或计价口径、来源、层级和周期，明确区分工作量调整层与价格层，并说明登记不构成真实性证明。价格栏只是把题给已确认900 CNY/人日称为计价基准，且明确其为绝对价格、不是需要1.00基线的相对因子；未增加独立比较价格、调整幅度或未提供的来源，因此不等于编造价格比较基线。"
+  },
+  {
+    "case_id": "O23",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "两个参数结构完整、workload与price层不同；未给价格基线不编造；登记不等于真实性证明。"
+    ],
+    "reviewer": "root + independent semantic judge",
+    "reason": "两参数的值、单位、基线或计价口径、来源、层级、周期和适用范围完整；工作量因子与人工单价分层清楚。价格登记沿用题给900元/人日报价，并明确未提供独立的比较调整基线；同时明确登记仅提供追溯线索，不能独立证明来源真实性。"
+  },
+  {
+    "case_id": "O24",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "不作当前通用费率；地区期间匹配；重叠档需依据，不自选。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O24",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "不作当前通用费率；地区期间匹配；重叠档需依据，不自选。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O25",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "合同期间归集2300，分类及原输入可追踪。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O25",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "合同期间归集2300，分类及原输入可追踪。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O26",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "不全额归单项目、不发明折旧/分摊/5%；给合同周期与使用归属取证清单。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O26",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "不全额归单项目、不发明折旧/分摊/5%；给合同周期与使用归属取证清单。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O27",
+    "variant": "new_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "完整同层总额36944；范围周期币种已含复核。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O27",
+    "variant": "without_skill",
+    "split": "validation",
+    "passed": true,
+    "criteria": [
+      "完整同层总额36944；范围周期币种已含复核。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O28",
+    "variant": "new_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "剔除包含的8000，未知不0，N01传递；10000仅可分离已知小计，不完整总额。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  },
+  {
+    "case_id": "O28",
+    "variant": "without_skill",
+    "split": "train",
+    "passed": true,
+    "criteria": [
+      "剔除包含的8000，未知不0，N01传递；10000仅可分离已知小计，不完整总额。"
+    ],
+    "reviewer": "root manual review of actual output",
+    "reason": "逐项读取实际回答：数值/单位及本题范围、完成或判停理由满足预先固定检查项。"
+  }
+]

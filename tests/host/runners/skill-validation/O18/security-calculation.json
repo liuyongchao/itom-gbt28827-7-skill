@@ -1,0 +1,96 @@
+{
+  "calculator_version": "1.0.1-restricted",
+  "mode": "security",
+  "status": "needs_review",
+  "result": {
+    "classes": [
+      {
+        "id": "A",
+        "workload": "2",
+        "direct_labor": null
+      },
+      {
+        "id": "B",
+        "workload": "6",
+        "direct_labor": null
+      }
+    ],
+    "workload": "8",
+    "workload_unit": "person_day",
+    "workload_complete": true,
+    "direct_labor": null,
+    "other_costs": {
+      "direct_nonhuman": null,
+      "indirect_labor": null,
+      "indirect_nonhuman": null
+    },
+    "amount": null,
+    "known_subtotal": "0",
+    "currency": "CNY",
+    "missing_costs": [
+      "direct_nonhuman",
+      "indirect_labor",
+      "indirect_nonhuman",
+      "direct_labor"
+    ]
+  },
+  "issues": [
+    {
+      "code": "S01/N01",
+      "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+    },
+    {
+      "code": "UNKNOWN_COST",
+      "message": "direct_nonhuman 未确定；不得视为0"
+    },
+    {
+      "code": "UNKNOWN_COST",
+      "message": "indirect_labor 未确定；不得视为0"
+    },
+    {
+      "code": "UNKNOWN_COST",
+      "message": "indirect_nonhuman 未确定；不得视为0"
+    },
+    {
+      "code": "UNKNOWN_COST",
+      "message": "direct_labor 未确定；不得视为0"
+    }
+  ],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O18-whole-security",
+    "scope_id": "O18-whole-security",
+    "domain": "security",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "service_total",
+    "status": "needs_review",
+    "amount": null,
+    "known_subtotal": "0",
+    "issues": [
+      {
+        "code": "S01/N01",
+        "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+      },
+      {
+        "code": "UNKNOWN_COST",
+        "message": "direct_nonhuman 未确定；不得视为0"
+      },
+      {
+        "code": "UNKNOWN_COST",
+        "message": "indirect_labor 未确定；不得视为0"
+      },
+      {
+        "code": "UNKNOWN_COST",
+        "message": "indirect_nonhuman 未确定；不得视为0"
+      },
+      {
+        "code": "UNKNOWN_COST",
+        "message": "direct_labor 未确定；不得视为0"
+      }
+    ],
+    "security_scope_count": "1",
+    "security_scope_size": "2"
+  }
+}

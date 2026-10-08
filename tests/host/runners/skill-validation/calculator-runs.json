@@ -1,0 +1,460 @@
+[
+  {
+    "case_id": "O03",
+    "run": "direct_part_time",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O03\\direct_part_time-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O03\\direct_part_time-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "allocation",
+      "status": "calculated",
+      "result": {
+        "basis_unit": "person_hour",
+        "share": "0.2",
+        "allocated_amount": "4800",
+        "amount": "4800",
+        "known_subtotal": "4800",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O03-direct",
+        "scope_id": "O03-direct",
+        "domain": "allocation",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "cost_component",
+        "status": "calculated",
+        "amount": "4800",
+        "known_subtotal": "4800",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    }
+  },
+  {
+    "case_id": "O03",
+    "run": "indirect_allocation",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O03\\indirect_allocation-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O03\\indirect_allocation-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "allocation",
+      "status": "calculated",
+      "result": {
+        "basis_unit": "person_hour",
+        "share": "0.15",
+        "allocated_amount": "2400",
+        "amount": "2400",
+        "known_subtotal": "2400",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O03-indirect",
+        "scope_id": "O03-indirect",
+        "domain": "allocation",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "cost_component",
+        "status": "calculated",
+        "amount": "2400",
+        "known_subtotal": "2400",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    }
+  },
+  {
+    "case_id": "O05",
+    "run": "unit_workload",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O05\\unit_workload-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O05\\unit_workload-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "unit_workload",
+      "status": "calculated",
+      "result": {
+        "period": "2026年度合同期间",
+        "workload_unit": "person_day",
+        "basis": "one_object_per_period",
+        "workload": "6.6",
+        "activities": [
+          {
+            "id": "routine",
+            "category": "routine",
+            "workload": "2"
+          },
+          {
+            "id": "response",
+            "category": "response",
+            "workload": "2"
+          },
+          {
+            "id": "improvement",
+            "category": "improvement",
+            "workload": "2"
+          },
+          {
+            "id": "assessment",
+            "category": "assessment",
+            "workload": "0.6"
+          }
+        ]
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding"
+    }
+  },
+  {
+    "case_id": "O08",
+    "run": "environment",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O08\\environment-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O08\\environment-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "environment",
+      "status": "partial",
+      "result": {
+        "classes": [
+          {
+            "id": "environment",
+            "workload": "7.2",
+            "direct_labor": "6336"
+          }
+        ],
+        "workload": "7.2",
+        "workload_unit": "person_day",
+        "workload_complete": true,
+        "direct_labor": "6336",
+        "other_costs": {
+          "direct_nonhuman": null,
+          "indirect_labor": null,
+          "indirect_nonhuman": null
+        },
+        "amount": null,
+        "known_subtotal": "6336",
+        "currency": "CNY",
+        "missing_costs": [
+          "direct_nonhuman",
+          "indirect_labor",
+          "indirect_nonhuman"
+        ]
+      },
+      "issues": [
+        {
+          "code": "UNKNOWN_COST",
+          "message": "direct_nonhuman 未确定；不得视为0"
+        },
+        {
+          "code": "UNKNOWN_COST",
+          "message": "indirect_labor 未确定；不得视为0"
+        },
+        {
+          "code": "UNKNOWN_COST",
+          "message": "indirect_nonhuman 未确定；不得视为0"
+        }
+      ],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O08-environment",
+        "scope_id": "O08-environment",
+        "domain": "environment",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "partial",
+        "amount": null,
+        "known_subtotal": "6336",
+        "issues": [
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_nonhuman 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_labor 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_nonhuman 未确定；不得视为0"
+          }
+        ],
+        "security_scope_count": "0"
+      }
+    }
+  },
+  {
+    "case_id": "O09",
+    "run": "hardware",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O09\\hardware-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O09\\hardware-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "hardware",
+      "status": "calculated",
+      "result": {
+        "classes": [
+          {
+            "id": "A",
+            "workload": "3.6",
+            "direct_labor": "3240"
+          },
+          {
+            "id": "B",
+            "workload": "2.4",
+            "direct_labor": "3168"
+          }
+        ],
+        "workload": "6",
+        "workload_unit": "person_day",
+        "workload_complete": true,
+        "direct_labor": "6408",
+        "other_costs": {
+          "direct_nonhuman": "800",
+          "indirect_labor": "400",
+          "indirect_nonhuman": "200"
+        },
+        "amount": "7808",
+        "known_subtotal": "7808",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O09-hardware",
+        "scope_id": "O09-hardware",
+        "domain": "hardware",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "calculated",
+        "amount": "7808",
+        "known_subtotal": "7808",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    }
+  },
+  {
+    "case_id": "O18",
+    "run": "security",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O18\\security-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O18\\security-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "security",
+      "status": "needs_review",
+      "result": {
+        "classes": [
+          {
+            "id": "A",
+            "workload": "2",
+            "direct_labor": null
+          },
+          {
+            "id": "B",
+            "workload": "6",
+            "direct_labor": null
+          }
+        ],
+        "workload": "8",
+        "workload_unit": "person_day",
+        "workload_complete": true,
+        "direct_labor": null,
+        "other_costs": {
+          "direct_nonhuman": null,
+          "indirect_labor": null,
+          "indirect_nonhuman": null
+        },
+        "amount": null,
+        "known_subtotal": "0",
+        "currency": "CNY",
+        "missing_costs": [
+          "direct_nonhuman",
+          "indirect_labor",
+          "indirect_nonhuman",
+          "direct_labor"
+        ]
+      },
+      "issues": [
+        {
+          "code": "S01/N01",
+          "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+        },
+        {
+          "code": "UNKNOWN_COST",
+          "message": "direct_nonhuman 未确定；不得视为0"
+        },
+        {
+          "code": "UNKNOWN_COST",
+          "message": "indirect_labor 未确定；不得视为0"
+        },
+        {
+          "code": "UNKNOWN_COST",
+          "message": "indirect_nonhuman 未确定；不得视为0"
+        },
+        {
+          "code": "UNKNOWN_COST",
+          "message": "direct_labor 未确定；不得视为0"
+        }
+      ],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O18-whole-security",
+        "scope_id": "O18-whole-security",
+        "domain": "security",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "needs_review",
+        "amount": null,
+        "known_subtotal": "0",
+        "issues": [
+          {
+            "code": "S01/N01",
+            "message": "整个待测安全范围不是单类别；仅计算已给工作量，禁止多类别成本及拆分绕过"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_nonhuman 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_labor 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "indirect_nonhuman 未确定；不得视为0"
+          },
+          {
+            "code": "UNKNOWN_COST",
+            "message": "direct_labor 未确定；不得视为0"
+          }
+        ],
+        "security_scope_count": "1",
+        "security_scope_size": "2"
+      }
+    }
+  },
+  {
+    "case_id": "O21",
+    "run": "migration",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O21\\migration-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O21\\migration-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "migration",
+      "status": "calculated",
+      "result": {
+        "classes": [
+          {
+            "id": "device-move",
+            "workload": "5.7024",
+            "direct_labor": "6842.88"
+          }
+        ],
+        "workload": "5.7024",
+        "workload_unit": "person_day",
+        "direct_labor": "6842.88",
+        "other_costs": {
+          "direct_nonhuman": "700",
+          "indirect_labor": "200",
+          "indirect_nonhuman": "100"
+        },
+        "amount": "7842.88",
+        "known_subtotal": "7842.88",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O21-migration",
+        "scope_id": "O21-migration",
+        "domain": "migration",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "calculated",
+        "amount": "7842.88",
+        "known_subtotal": "7842.88",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    }
+  },
+  {
+    "case_id": "O27",
+    "run": "total",
+    "return_code": 0,
+    "input_file": "work\\itom-evals\\runners\\skill-validation\\O27\\total-input.json",
+    "output_file": "work\\itom-evals\\runners\\skill-validation\\O27\\total-calculation.json",
+    "result": {
+      "calculator_version": "1.0.1-restricted",
+      "mode": "total",
+      "status": "calculated",
+      "result": {
+        "entries": [
+          {
+            "id": "environment",
+            "included_known_subtotal": "7436",
+            "status": "calculated",
+            "excluded_pending_review": false
+          },
+          {
+            "id": "hardware",
+            "included_known_subtotal": "7808",
+            "status": "calculated",
+            "excluded_pending_review": false
+          },
+          {
+            "id": "software",
+            "included_known_subtotal": "21700",
+            "status": "calculated",
+            "excluded_pending_review": false
+          }
+        ],
+        "amount": "36944",
+        "known_subtotal": "36944",
+        "currency": "CNY",
+        "missing_costs": []
+      },
+      "issues": [],
+      "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+      "precision": "Decimal 80 significant digits; no currency rounding",
+      "summary": {
+        "id": "O27-total",
+        "scope_id": "O27-total",
+        "domain": "total",
+        "period": "2026年度合同期间",
+        "currency": "CNY",
+        "level": "service_total",
+        "status": "calculated",
+        "amount": "36944",
+        "known_subtotal": "36944",
+        "issues": [],
+        "security_scope_count": "0"
+      }
+    }
+  }
+]

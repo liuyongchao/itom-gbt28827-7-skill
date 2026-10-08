@@ -1,0 +1,47 @@
+{
+  "mode": "total",
+  "period": "2026年度合同期间",
+  "currency": "CNY",
+  "scope_id": "O27-total",
+  "expected_level": "service_total",
+  "coverage_complete": true,
+  "non_overlap_confirmed": true,
+  "entries": [
+    {
+      "id": "environment",
+      "scope_id": "O27-environment",
+      "domain": "environment",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "level": "service_total",
+      "status": "calculated",
+      "amount": "7436",
+      "known_subtotal": "7436",
+      "issues": []
+    },
+    {
+      "id": "hardware",
+      "scope_id": "O27-hardware",
+      "domain": "hardware",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "level": "service_total",
+      "status": "calculated",
+      "amount": "7808",
+      "known_subtotal": "7808",
+      "issues": []
+    },
+    {
+      "id": "software",
+      "scope_id": "O27-software",
+      "domain": "software",
+      "period": "2026年度合同期间",
+      "currency": "CNY",
+      "level": "service_total",
+      "status": "calculated",
+      "amount": "21700",
+      "known_subtotal": "21700",
+      "issues": []
+    }
+  ]
+}

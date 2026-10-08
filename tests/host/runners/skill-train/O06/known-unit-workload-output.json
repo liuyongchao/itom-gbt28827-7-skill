@@ -1,0 +1,8 @@
+{
+  "numeric_results": {
+    "known_unit_workload": "2.4"
+  },
+  "method": "Python Decimal精确计算辅助人工复算",
+  "reason": "指定计算器unit_workload模式要求完整活动或有依据裁剪；响应次数缺失，不能虚构完整输入。只精确复算已知例行操作部分。",
+  "precision": 80
+}

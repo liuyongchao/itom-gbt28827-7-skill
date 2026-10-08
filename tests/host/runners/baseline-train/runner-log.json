@@ -1,0 +1,17 @@
+{
+  "runner": "baseline-train",
+  "started_at_utc": "2026-10-08T14:16:07.7785087Z",
+  "ended_at_utc": "2026-10-08T14:21:06.0082949Z",
+  "tool_call_count": 3,
+  "tool_call_count_basis": "Three functions.exec calls, each containing exactly one underlying tool call: read tasks, create answer writer, execute writer and validate saved JSON.",
+  "task_count": 17,
+  "completed_output_count": 17,
+  "concrete_model_id": "unavailable",
+  "token_usage": "unavailable",
+  "input_file": "work/itom-evals/train-tasks.json",
+  "output_directory": "work/itom-evals/runners/baseline-train",
+  "network_used": false,
+  "skills_read": false,
+  "subagents_created": false,
+  "issues": []
+}

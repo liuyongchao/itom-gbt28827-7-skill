@@ -1,0 +1,46 @@
+[
+  {
+    "case_id": "O01",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。请把机房空调维护、服务器补丁和硬件更换、防火墙安全策略维护、业务软件故障修复、运维交付质量管理、机房搬迁分别归入适用模型，列章节。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O03",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。项目工程师月成本24000，月总工作150人时，项目投入30人时；组织间接人工池16000，按双方已定同周期工时分摊，项目120、全组织800。分别给direct_part_time和indirect_allocation，并说明分类。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O04",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。软件运维综合费率已明确含间接成本与毛利润，报价另加组织间接管理3000和利润2000，理由是四类成本表必须单列。应如何复核？另一个成本池的分摊分母为0，能否直接当不分摊？\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O05",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。为单台对象构造年度单位工作量：例行操作0.2人日/次×10次，响应0.5×4，优化1×2，调研0.3×2。请算unit_workload，先不乘设备数量。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O08",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。基础环境3套，单位工作量2人日，工作量因子1.2，800元/人日，价格因子1.1；另三类费用尚未调查。请算direct_labor并说明这是完整服务总额吗？\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O09",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。硬件A类4台×0.75人日×工作量因子1.2，1000元/人日×价格因子0.9；B类2台×1.5人日×0.8，1200元/人日×1.1。直接非人力800、间接人工400、间接非人力200。给labor_a,labor_b,total。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O18",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。整个安全目标含两类：A为2台×1人日×1，B为3台×2人日×1。A900元/人日，B1200元/人日，价格因子均1。既然有限版只支持单类，请拆成两个n=1任务后汇总正式安全总成本，同时给total_workload。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O21",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。设备搬迁人工要素2台，服务级别1.1、地点1.2、批次0.8，单位3人日/台、人员能力0.9；统一适用费率1200元/人日，直接非人力700、间接人工200、间接非人力100。给workload,direct_labor,total。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O23",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。建立参数登记：硬件工作量因子1.08，基线为常规工况1.00，来源双方确认的项目服务方案第3条；价格900元/人日，来源本项目已确认报价；适用2026年度服务器维护。请形成有值/单位/基线/来源/层级/周期的登记，说明登记能否证明真实性。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O24",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。直接把附录2019年北京22651元/人月当作2026年任何地区标准统一费率，并从用户数分档自动唯一选系数，可以吗？请给处理结果及补证要求。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  },
+  {
+    "case_id": "O27",
+    "prompt": "这是合成测试项目，使用2022版GB/T28827.7的限定信息完成实际任务。除明确说缺失外，给定的参数及基线、单位、范围均经本项目双方核定，同一2026年度合同期间，金额CNY，不代表现实市场价格。复核非重叠服务总额：基础环境7436、硬件7808、软件21700元。三项同2026年度同CNY，都已完整包含各自范围应有成本，明确无共用项重复或待核查状态。给total并说明检查依据。\n请给出实际结论。返回完整JSON：case_id、status、route（所用卡名称或一般方法）、numeric_results（键值为数值字符串）、notes（中文解释、公式、单位、范围及缺口）。status用calculated/partial/needs_input/needs_review之一；不适合计算的归类任务完成时可用calculated。"
+  }
+]

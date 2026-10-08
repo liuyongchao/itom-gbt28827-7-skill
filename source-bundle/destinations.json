@@ -1,0 +1,104 @@
+{
+  "mode": "single",
+  "confirmed": "2026-10-08",
+  "entries": [
+    {
+      "capability_id": "cap.itom-gbt28827-7.scope-routing",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/scope-routing.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.cost-ledger",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/cost-ledger.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.unit-workload",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/unit-workload.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.environment-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/environment-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.hardware-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/hardware-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.software-size",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/software-size.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.software-workload",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/software-workload.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.software-effort-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/software-effort-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.security-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/security-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.management-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/management-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.migration-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/migration-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.parameter-evidence",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/parameter-evidence.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.nonhuman-cost",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/nonhuman-cost.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    },
+    {
+      "capability_id": "cap.itom-gbt28827-7.total-review",
+      "served_by": "itom-cost-gbt28827-7",
+      "card": "references/capabilities/total-review.md",
+      "user_preference": "single",
+      "gate_eligible": true
+    }
+  ]
+}

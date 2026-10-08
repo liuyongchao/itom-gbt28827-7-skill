@@ -1,0 +1,23 @@
+{
+  "mode": "environment",
+  "period": "2026年度合同期间",
+  "currency": "CNY",
+  "scope_id": "O08-environment",
+  "workload_unit": "person_day",
+  "rate_unit": "CNY/person_day",
+  "classes": [
+    {
+      "id": "environment",
+      "quantity": "3",
+      "unit_workload": "2",
+      "workload_factor": "1.2",
+      "rate": "800",
+      "price_factor": "1.1"
+    }
+  ],
+  "other_costs": {
+    "direct_nonhuman": null,
+    "indirect_labor": null,
+    "indirect_nonhuman": null
+  }
+}

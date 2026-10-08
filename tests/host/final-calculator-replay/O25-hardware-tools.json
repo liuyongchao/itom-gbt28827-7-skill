@@ -1,0 +1,49 @@
+{
+  "calculator_version": "1.0.1-restricted",
+  "mode": "nonhuman",
+  "status": "calculated",
+  "result": {
+    "items": [
+      {
+        "id": "硬件工具折旧",
+        "amount": "900"
+      },
+      {
+        "id": "硬件工具管理",
+        "amount": "100"
+      },
+      {
+        "id": "硬件工具使用",
+        "amount": "200"
+      },
+      {
+        "id": "硬件工具维护",
+        "amount": "80"
+      },
+      {
+        "id": "硬件工具其他",
+        "amount": "20"
+      }
+    ],
+    "amount": "1300",
+    "known_subtotal": "1300",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O25-hardware-tools",
+    "scope_id": "O25-hardware-tools",
+    "domain": "nonhuman",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "cost_component",
+    "status": "calculated",
+    "amount": "1300",
+    "known_subtotal": "1300",
+    "issues": [],
+    "security_scope_count": "0"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "calculator_version": "1.0.0-restricted",
+  "mode": "security",
+  "status": "calculated",
+  "result": {
+    "classes": [
+      {
+        "id": "全范围唯一安全类别",
+        "workload": "3.6",
+        "direct_labor": "3762"
+      }
+    ],
+    "workload": "3.6",
+    "workload_unit": "person_day",
+    "workload_complete": true,
+    "direct_labor": "3762",
+    "other_costs": {
+      "direct_nonhuman": "400",
+      "indirect_labor": "250",
+      "indirect_nonhuman": "150"
+    },
+    "amount": "4562",
+    "known_subtotal": "4562",
+    "currency": "CNY",
+    "missing_costs": []
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding",
+  "summary": {
+    "id": "O17-security",
+    "scope_id": "O17-security",
+    "domain": "security",
+    "period": "2026年度合同期间",
+    "currency": "CNY",
+    "level": "service_total",
+    "status": "calculated",
+    "amount": "4562",
+    "known_subtotal": "4562",
+    "issues": [],
+    "security_scope_count": "1",
+    "security_scope_size": "1"
+  }
+}

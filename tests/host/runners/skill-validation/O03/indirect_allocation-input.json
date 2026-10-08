@@ -1,0 +1,11 @@
+{
+  "mode": "allocation",
+  "period": "2026年度合同期间",
+  "currency": "CNY",
+  "scope_id": "O03-indirect",
+  "pool": "16000",
+  "numerator": "120",
+  "denominator": "800",
+  "basis_unit": "person_hour",
+  "basis_source": "合成任务给定且双方已核定的项目输入；双方已定同周期项目工时/全组织工时"
+}

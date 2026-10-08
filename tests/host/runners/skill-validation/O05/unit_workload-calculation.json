@@ -1,0 +1,36 @@
+{
+  "calculator_version": "1.0.1-restricted",
+  "mode": "unit_workload",
+  "status": "calculated",
+  "result": {
+    "period": "2026年度合同期间",
+    "workload_unit": "person_day",
+    "basis": "one_object_per_period",
+    "workload": "6.6",
+    "activities": [
+      {
+        "id": "routine",
+        "category": "routine",
+        "workload": "2"
+      },
+      {
+        "id": "response",
+        "category": "response",
+        "workload": "2"
+      },
+      {
+        "id": "improvement",
+        "category": "improvement",
+        "workload": "2"
+      },
+      {
+        "id": "assessment",
+        "category": "assessment",
+        "workload": "0.6"
+      }
+    ]
+  },
+  "issues": [],
+  "notice": "只校验声明输入与算术；不验证证据真实性、参数适用性或全标准符合性。",
+  "precision": "Decimal 80 significant digits; no currency rounding"
+}

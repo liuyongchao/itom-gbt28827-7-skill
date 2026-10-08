@@ -1,0 +1,88 @@
+{
+  "evaluation": "blind-trigger-and-initial-route",
+  "skill": "itom-cost-gbt28827-7",
+  "metadata": {
+    "recorded_at": "2026-10-08T22:22:58.3360328+08:00",
+    "exact_elapsed_seconds": null,
+    "elapsed_note": "本次读取前未启动统一计时器，无法提供可信的完整耗时；记录完成时间，未虚构起始时间。",
+    "model_version": null,
+    "model_note": "系统说明为基于 GPT-6 的 Codex；当前确切模型版本无法读取。",
+    "token_usage": null,
+    "token_note": "当前工具未暴露本次评测的 token 计数。",
+    "tool_calls": {
+      "functions_exec": 2,
+      "exec_command": 2,
+      "count_basis": "含读取指定输入和写入并回读此输出；不含向父代理发送最终结果。"
+    },
+    "sources_read": [
+      "work/itom-preview/SKILL.md",
+      "work/itom-evals/trigger-tasks.json"
+    ],
+    "capability_cards_read": 0
+  },
+  "results": [
+    {
+      "case_id": "T01",
+      "would_trigger": true,
+      "reason": "明确要求按 GB/T 28827.7 核算年度运维项目，命中技能主要用途；项目尚未指定运维对象，先确定范围再推进后续核算。",
+      "if_triggered_action": "先读取范围路由卡，确认服务对象、六类范围、年度周期与用途，再按阶段选择工作量和费用卡。",
+      "route": "scope-routing"
+    },
+    {
+      "case_id": "T02",
+      "would_trigger": true,
+      "reason": "问题核心是综合人月费率与间接管理费是否重复包含，直接命中费用层级和重复包含检查。",
+      "if_triggered_action": "先读取成本台账卡，核查综合费率已含项目、间接管理费归属与分摊依据；必要时再用总成本复核卡检查结果。",
+      "route": "cost-ledger"
+    },
+    {
+      "case_id": "T03",
+      "would_trigger": true,
+      "reason": "虽然对象是服务器，但明确交付物是参数证据表，优先按参数来源、基线和适用性登记意图路由。",
+      "if_triggered_action": "先读取参数证据卡，登记 SLA、工时及其他参数的值、单位、基线、来源、适用期间和核查状态，列出缺项。",
+      "route": "parameter-evidence"
+    },
+    {
+      "case_id": "T04",
+      "would_trigger": true,
+      "reason": "请求云迁移的搬迁工作量及工具成本测算，属于迁移成本估算，未要求实际执行迁移。",
+      "if_triggered_action": "先读取迁移成本卡，确认地点、批次、人员能力及工作量参数；工具费用明确跨入直接非人力成本，可补读该卡。",
+      "route": "migration-cost"
+    },
+    {
+      "case_id": "T05",
+      "would_trigger": false,
+      "reason": "修复 Python 排序函数语法错误属于代码调试，与运维成本度量能力无关。",
+      "if_triggered_action": "不调用本技能；按一般代码调试任务处理。",
+      "route": null
+    },
+    {
+      "case_id": "T06",
+      "would_trigger": false,
+      "reason": "春天主题散文写作与本技能的运维成本能力域无关。",
+      "if_triggered_action": "不调用本技能；按中文创作请求处理。",
+      "route": null
+    },
+    {
+      "case_id": "T07",
+      "would_trigger": false,
+      "reason": "从新系统需求完整计数 NESMA 功能点且不涉及运维，明确命中外部功能点方法重建和从需求完整计数的不适用边界。",
+      "if_triggered_action": "不调用本技能，也不以软件规模卡替代 NESMA 完整计数方法。",
+      "route": null
+    },
+    {
+      "case_id": "T08",
+      "would_trigger": false,
+      "reason": "用户要求连接生产服务器执行迁移，且明确排除费用估算；实际迁移系统在本技能不适用范围内。",
+      "if_triggered_action": "不调用本技能；迁移成本卡不能执行生产系统迁移。",
+      "route": null
+    },
+    {
+      "case_id": "T09",
+      "would_trigger": false,
+      "reason": "请求的唯一结果是两类安全服务的直接总价，明确命中安全多类别总成本的不适用边界；提到本技能并不使其支持该计算。",
+      "if_triggered_action": "不进入安全成本计算卡直接定总价；说明整个目标不满足 n=1，不能分成单类计算后汇总。若另行提出多类别工作量或参数登记任务，再按对应支持意图路由。",
+      "route": null
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "source": "trigger-output-final.json",
+  "planned": 12,
+  "completed": 12,
+  "passed": 12,
+  "results": [
+    {
+      "case_id": "T01",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "scope-routing",
+      "actual_trigger": true,
+      "actual_route": "scope-routing"
+    },
+    {
+      "case_id": "T02",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "cost-ledger",
+      "actual_trigger": true,
+      "actual_route": "cost-ledger"
+    },
+    {
+      "case_id": "T03",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "parameter-evidence",
+      "actual_trigger": true,
+      "actual_route": "parameter-evidence"
+    },
+    {
+      "case_id": "T04",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "migration-cost",
+      "actual_trigger": true,
+      "actual_route": "migration-cost"
+    },
+    {
+      "case_id": "T05",
+      "passed": true,
+      "expected_trigger": false,
+      "expected_route": null,
+      "actual_trigger": false,
+      "actual_route": null
+    },
+    {
+      "case_id": "T06",
+      "passed": true,
+      "expected_trigger": false,
+      "expected_route": null,
+      "actual_trigger": false,
+      "actual_route": null
+    },
+    {
+      "case_id": "T07",
+      "passed": true,
+      "expected_trigger": false,
+      "expected_route": null,
+      "actual_trigger": false,
+      "actual_route": null
+    },
+    {
+      "case_id": "T08",
+      "passed": true,
+      "expected_trigger": false,
+      "expected_route": null,
+      "actual_trigger": false,
+      "actual_route": null
+    },
+    {
+      "case_id": "T09",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "security-cost",
+      "actual_trigger": true,
+      "actual_route": "security-cost"
+    },
+    {
+      "case_id": "H01",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "security-cost",
+      "actual_trigger": true,
+      "actual_route": "security-cost"
+    },
+    {
+      "case_id": "H02",
+      "passed": true,
+      "expected_trigger": true,
+      "expected_route": "software-effort-cost",
+      "actual_trigger": true,
+      "actual_route": "software-effort-cost"
+    },
+    {
+      "case_id": "H03",
+      "passed": true,
+      "expected_trigger": false,
+      "expected_route": null,
+      "actual_trigger": false,
+      "actual_route": null
+    }
+  ]
+}

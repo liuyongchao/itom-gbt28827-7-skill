@@ -1,0 +1,42 @@
+{
+  "mode": "migration",
+  "period": "2026年度合同期间",
+  "currency": "CNY",
+  "scope_id": "O21-migration",
+  "workload_unit": "person_day",
+  "rate_unit": "CNY/person_day",
+  "rate": "1200",
+  "rate_source": "合成任务给定且双方已核定的项目输入；明确统一适用全范围人工",
+  "common_rate_applicable": true,
+  "classes": [
+    {
+      "id": "device-move",
+      "quantity": "2",
+      "quantity_unit": "台",
+      "unit_workload": "3",
+      "personnel_factor": "0.9",
+      "factors": {
+        "service": {
+          "applicable": true,
+          "value": "1.1",
+          "source": "合成任务给定且双方已核定的项目输入"
+        },
+        "location": {
+          "applicable": true,
+          "value": "1.2",
+          "source": "合成任务给定且双方已核定的项目输入"
+        },
+        "batch": {
+          "applicable": true,
+          "value": "0.8",
+          "source": "合成任务给定且双方已核定的项目输入"
+        }
+      }
+    }
+  ],
+  "other_costs": {
+    "direct_nonhuman": "700",
+    "indirect_labor": "200",
+    "indirect_nonhuman": "100"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "numeric_results": {
+    "normalized_productivity": "0.25",
+    "base_workload": "80"
+  },
+  "method": "Python Decimal精确计算辅助人工复算",
+  "reason": "依据题目明确的非零FP/人时单位，显式取倒数；MCF缺失，仅计算生产率转换和未调整基数。",
+  "precision": 80
+}

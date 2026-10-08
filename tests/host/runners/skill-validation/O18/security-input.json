@@ -1,0 +1,27 @@
+{
+  "mode": "security",
+  "period": "2026年度合同期间",
+  "currency": "CNY",
+  "scope_id": "O18-whole-security",
+  "workload_unit": "person_day",
+  "rate_unit": "CNY/person_day",
+  "scope_size": "2",
+  "classes": [
+    {
+      "id": "A",
+      "quantity": "2",
+      "unit_workload": "1",
+      "workload_factor": "1",
+      "rate": "900",
+      "price_factor": "1"
+    },
+    {
+      "id": "B",
+      "quantity": "3",
+      "unit_workload": "2",
+      "workload_factor": "1",
+      "rate": "1200",
+      "price_factor": "1"
+    }
+  ]
+}

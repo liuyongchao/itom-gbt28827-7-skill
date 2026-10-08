@@ -1,0 +1,31 @@
+{
+  "mode": "unit_workload",
+  "period": "2026年度合同期间",
+  "workload_unit": "person_day",
+  "activities": [
+    {
+      "id": "routine",
+      "category": "routine",
+      "effort": "0.2",
+      "frequency": "10"
+    },
+    {
+      "id": "response",
+      "category": "response",
+      "effort": "0.5",
+      "frequency": "4"
+    },
+    {
+      "id": "improvement",
+      "category": "improvement",
+      "effort": "1",
+      "frequency": "2"
+    },
+    {
+      "id": "assessment",
+      "category": "assessment",
+      "effort": "0.3",
+      "frequency": "2"
+    }
+  ]
+}

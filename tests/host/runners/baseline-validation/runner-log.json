@@ -1,0 +1,18 @@
+{
+  "runner": "baseline-validation",
+  "started_at": "2026-10-08T22:29:17.4787626+08:00",
+  "ended_at": "2026-10-08T22:32:43.9069494+08:00",
+  "case_count": 11,
+  "task_source": "work/itom-evals/validation-tasks.json",
+  "output_pattern": "work/itom-evals/runners/baseline-validation/<case_id>/output.md",
+  "tool_call_count": 4,
+  "tool_call_count_definition": "共2次functions.exec编排调用和2次嵌套exec_command宿主调用；按两者合计记录4次，按宿主调用统计为2次。",
+  "host_tool_call_count": 2,
+  "network_calls": 0,
+  "subagents_created": 0,
+  "model_specific_version": null,
+  "model_version_note": "当前运行环境未暴露可验证的具体模型标识或版本，不能据一般身份声明推断。",
+  "tokens_used": null,
+  "token_note": "当前执行工具未提供此执行者的实际token用量。",
+  "validation": "已生成11份可解析JSON，检查numeric_results值均为可解析十进制数值字符串；未评价通过率。"
+}

@@ -1,0 +1,50 @@
+{
+  "T01": {
+    "would_trigger": true,
+    "route": "scope-routing"
+  },
+  "T02": {
+    "would_trigger": true,
+    "route": "cost-ledger"
+  },
+  "T03": {
+    "would_trigger": true,
+    "route": "parameter-evidence"
+  },
+  "T04": {
+    "would_trigger": true,
+    "route": "migration-cost"
+  },
+  "T05": {
+    "would_trigger": false,
+    "route": null
+  },
+  "T06": {
+    "would_trigger": false,
+    "route": null
+  },
+  "T07": {
+    "would_trigger": false,
+    "route": null
+  },
+  "T08": {
+    "would_trigger": false,
+    "route": null
+  },
+  "T09": {
+    "would_trigger": true,
+    "route": "security-cost"
+  },
+  "H01": {
+    "would_trigger": true,
+    "route": "security-cost"
+  },
+  "H02": {
+    "would_trigger": true,
+    "route": "software-effort-cost"
+  },
+  "H03": {
+    "would_trigger": false,
+    "route": null
+  }
+}

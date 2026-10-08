@@ -1,0 +1,10 @@
+{
+  "period": "2026年度合同期间",
+  "mode": "software_size",
+  "size_unit": "set",
+  "size": "3",
+  "count_source": "用户合成测试题给定并经项目双方核定；不代表现实市场价格",
+  "level_factor": "1.2",
+  "type_factor": "0.9",
+  "factor_source": "用户合成测试题给定并经项目双方核定；不代表现实市场价格"
+}
